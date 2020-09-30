@@ -1,0 +1,29 @@
+{
+  "prettier.semi": false,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "vim",
+    "css",
+    "markdown",
+    "ruby",
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx",
+    "ruby"
+  ],
+  "javascript.suggestionActions.enabled": false,
+  "typescript.suggestionActions.enabled": false,
+  "solargraph.externalServer": {
+    "host": "localhost",
+    "port": 7658
+  },
+  "solargraph.transport": "external",
+  "solargraph.diagnostics": true,
+  "solargraph.hover": false,
+  "solargraph.checkGemVersion": false,
+  "solargraph.formatting": true,
+  "solargraph.autoformat": true,
+  "solargraph.rename": true
+}
