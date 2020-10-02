@@ -35,13 +35,16 @@ colors:
     white:   '#ffffff'
 
 window:
+  dimensions:
+    columns: 90
+    lines: 30
   padding:
     x: 10
     y: 10
 
   dynamic_padding: true
   decorations: none
-  startup_mode: Maximized
+  startup_mode: Windowed
 
 key_bindings:
   - { key: F11, action: ToggleFullscreen }
