@@ -4,7 +4,8 @@ Instructions are for Ubuntu-based distributions.
 
 #### Screenshot
 
-![Screenshot](https://github.com/davidkariuki/dotfiles/raw/master/screenshots/1.png "Screenshot")
+![Neovim](https://github.com/davidkariuki/dotfiles/raw/master/screenshots/nvim.png "Neovim")
+![Alacritty](https://github.com/davidkariuki/dotfiles/raw/master/screenshots/terminal.png "Alacritty")
 
 #### Binaries
 
