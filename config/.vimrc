@@ -8,8 +8,10 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" vim-polyglot
+" vim-polyglot | vim-markdown
 let g:polyglot_disabled = ['markdown']
+let g:markdown_fenced_languages = ['html', 'python', 'zsh=sh', 'ruby', 'sql', 'typescript', 'javascript']
+let g:markdown_syntax_conceal = 0
 
 " plugins
 source ~/.config/nvim/plugins.vim
@@ -41,7 +43,8 @@ set hlsearch  " highlight search
 set incsearch  " incremental search, search as you type
 set ignorecase " Ignore case when searching
 set smartcase " Ignore case when searching lowercase
-:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
 
 " Colors/Themes *****************************************************************
 if (has("nvim"))
