@@ -10,8 +10,9 @@ Instructions are for Ubuntu-based distributions.
 #### Binaries
 
 ```zsh
-sudo apt-get install -y zsh vim-gtk3 tmux tig hub bat snapd
+sudo apt-get install -y zsh vim-gtk3 tmux tig hub bat snapd python3-pip
 sudo snap install --edge nvim --classic
+pip3 install python-language-server
 ```
 
 Ripgrep apt installation is currently broken

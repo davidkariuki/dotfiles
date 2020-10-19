@@ -118,7 +118,9 @@ alias k="kubectl"
 alias cat="batcat"
 
 NPM_GLOBAL="${HOME}/.npm-global"
+LOCAL_PATH="${HOME}/.local"
 export PATH="$PATH:$NPM_GLOBAL/bin"
+export PATH="$PATH:$LOCAL_PATH/bin"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_GLOBAL/share/man"
 export PATH="$PATH:/snap/bin"
 prompt_context(){}

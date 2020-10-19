@@ -77,6 +77,7 @@ set vb t_vb= " Turn off bell, this could be more annoying, but I'm not sure how
 
 " Mapping ********************************************************************
 imap ii <Esc>
+map <leader>d :pu=strftime('%b %d, %Y %X')<cr>
 map <leader>w :up<cr>
 map <leader>v :vsp ~/.vimrc<cr>
 noremap <silent> <Leader>f :Fern . -drawer -reveal=% -width=28<CR><C-w>=
