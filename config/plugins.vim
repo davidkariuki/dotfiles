@@ -1,6 +1,4 @@
 call plug#begin()
-Plug 'jxnblk/vim-mdx-js'
-Plug 'tpope/vim-markdown'
 Plug 'lambdalisue/glyph-palette.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -24,5 +22,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'rakr/vim-one'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-rails'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()

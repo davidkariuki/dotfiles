@@ -8,11 +8,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" vim-polyglot | vim-markdown
-let g:polyglot_disabled = ['markdown']
-let g:markdown_fenced_languages = ['html', 'python', 'zsh=sh', 'ruby', 'sql', 'typescript', 'javascript']
-let g:markdown_syntax_conceal = 0
-
 " plugins
 source ~/.config/nvim/plugins.vim
 
@@ -27,6 +22,10 @@ let g:indentLine_char = '│'
 
 " Emmet
 let g:user_emmet_leader_key='<C-E>'
+
+" Conceal level for markdown
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
 
 " Tabs ************************************************************************
 set tabstop=2

@@ -1,5 +1,16 @@
 " coc plugins
-let g:coc_global_extensions = ['coc-solargraph', 'coc-styled-components', 'coc-css', 'coc-html', 'coc-tsserver', 'coc-prettier', 'coc-json']
+let g:coc_global_extensions = [
+  \'coc-actions',
+  \'coc-python',
+  \'coc-docker',
+  \'coc-solargraph',
+  \'coc-styled-components',
+  \'coc-css',
+  \'coc-html',
+  \'coc-tsserver',
+  \'coc-prettier',
+  \'coc-json'
+  \]
 
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -93,7 +104,6 @@ augroup mygroup
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
-" Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)

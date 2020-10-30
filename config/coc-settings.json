@@ -4,7 +4,6 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "vim",
     "css",
-    "markdown",
     "ruby",
     "javascript",
     "typescript",
@@ -16,7 +15,9 @@
     "python",
     "markdown",
     "md",
-    "mdx"
+    "mdx",
+    "dockerfile",
+    "yaml"
   ],
   "javascript.suggestionActions.enabled": false,
   "typescript.suggestionActions.enabled": false,
