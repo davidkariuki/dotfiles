@@ -54,22 +54,23 @@ hub clone tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 - start tmux and run `C-a I`
 
-- node
-
-```zsh
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
+- npm
 
 ```zsh
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 ```
 
-- Eslint, prettier & yarn
+- Eslint, prettier, yarn & n
 
 ```zsh
-npm i -g eslint prettier yarn
+npm i -g eslint prettier yarn n
+```
+
+- node
+
+```zsh
+n latest
 ```
 
 #### Fonts

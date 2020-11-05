@@ -123,6 +123,7 @@ export PATH="$PATH:$NPM_GLOBAL/bin"
 export PATH="$PATH:$LOCAL_PATH/bin"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_GLOBAL/share/man"
 export PATH="$PATH:/snap/bin"
+export N_PREFIX="${HOME}/.npm-global"
 prompt_context(){}
 eval "$(hub alias -s)"
 
