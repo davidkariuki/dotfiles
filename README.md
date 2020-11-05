@@ -54,17 +54,19 @@ hub clone tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 - start tmux and run `C-a I`
 
-- npm
+- yarn
 
 ```zsh
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
+mkdir ~/.yarn-global
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install yarn
+yarn config set prefix '~/.yarn-global'
 ```
 
-- Eslint, prettier, yarn & n
+- yarn binaries
 
 ```zsh
-npm i -g eslint prettier yarn n
+yarn add -g typescript vercel eslint prettier n
 ```
 
 - node

@@ -117,13 +117,13 @@ export BAT_THEME="TwoDark"
 alias k="kubectl"
 alias cat="batcat"
 
-NPM_GLOBAL="${HOME}/.npm-global"
+YARN_GLOBAL="${HOME}/.yarn-global"
 LOCAL_PATH="${HOME}/.local"
-export PATH="$PATH:$NPM_GLOBAL/bin"
-export PATH="$PATH:$LOCAL_PATH/bin"
-export MANPATH="${MANPATH-$(manpath)}:$NPM_GLOBAL/share/man"
-export PATH="$PATH:/snap/bin"
-export N_PREFIX="${HOME}/.npm-global"
+export PATH=$YARN_GLOBAL/bin:$PATH
+export PATH=$PATH:$LOCAL_PATH/bin
+export MANPATH="${MANPATH-$(manpath)}:$YARN_GLOBAL/share/man"
+export PATH=$PATH:/snap/bin
+export N_PREFIX=$YARN_GLOBAL
 prompt_context(){}
 eval "$(hub alias -s)"
 
