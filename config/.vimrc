@@ -28,6 +28,8 @@ let g:vim_markdown_conceal = 0
 let g:vim_markdown_conceal_code_blocks = 0
 let g:vim_markdown_frontmatter = 1
 
+" Maximizer
+nnoremap <leader>m :MaximizerToggle!<CR>
 " Tabs ************************************************************************
 set tabstop=2
 set softtabstop=2
@@ -73,7 +75,8 @@ set ch=1 " Make command one line high
 " Misc ************************************************************************
 set nowrap
 set number " Show line numbers
-set vb t_vb= " Turn off bell, this could be more annoying, but I'm not sure how
+set relativenumber " Show relative line numbers
+set vb t_vb= " Turn off bell
 
 " Mapping ********************************************************************
 imap ii <Esc>
