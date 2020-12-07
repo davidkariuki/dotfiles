@@ -118,8 +118,10 @@ alias k="kubectl"
 alias cat="batcat"
 
 YARN_GLOBAL="${HOME}/.yarn-global"
+NPM_GLOBAL="${HOME}/.npm-global"
 LOCAL_PATH="${HOME}/.local"
 export PATH=$YARN_GLOBAL/bin:$PATH
+export PATH=$NPM_GLOBAL/bin:$PATH
 export PATH=$PATH:$LOCAL_PATH/bin
 export MANPATH="${MANPATH-$(manpath)}:$YARN_GLOBAL/share/man"
 export PATH=$PATH:/snap/bin

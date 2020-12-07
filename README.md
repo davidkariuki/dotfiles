@@ -10,9 +10,8 @@ Instructions are for Ubuntu-based distributions.
 #### Binaries
 
 ```zsh
-sudo apt-get install -y zsh vim-gtk3 tmux tig hub bat snapd python3-pip
+sudo apt-get install -y zsh vim-gtk3 tmux tig bat snapd
 sudo snap install --edge nvim --classic
-pip3 install python-language-server
 ```
 
 Ripgrep apt installation is currently broken
@@ -57,16 +56,19 @@ hub clone tmux-plugins/tpm ~/.tmux/plugins/tpm
 - yarn
 
 ```zsh
+sudo apt install npm
+mkdir ~/.npm-global
 mkdir ~/.yarn-global
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt update && sudo apt install yarn
+npm config set prefix '~/.npm-global'
+
+npm i -g yarn
 yarn config set prefix '~/.yarn-global'
 ```
 
 - yarn binaries
 
 ```zsh
-yarn add -g typescript vercel eslint prettier n
+yarn global add typescript vercel eslint prettier n
 ```
 
 - node
@@ -77,15 +79,18 @@ n latest
 
 #### Fonts
 
-```zsh
-hub clone ryanoasis/nerd-fonts
-cd nerd-fonts && ./install.sh FiraMono
-```
+- Install the font in ./font
 
 #### Nvim config
 
 ```zsh
 mkdir -p ~/.config/nvim
+```
+
+### Alacritty config
+
+```zsh
+mkdir -p ~/.config/alacritty/alacritty
 ```
 
 #### Dotfile symlinks
