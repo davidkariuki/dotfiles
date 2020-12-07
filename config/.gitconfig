@@ -106,7 +106,7 @@
 [branch]
   autosetuprebase = always
 [push]
-	default = current
+  default = current
 [core]
   autocrlf = false
   editor = vim
@@ -117,7 +117,7 @@
   # Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
   # instead of a/b/c/d as prefixes for patches
   mnemonicprefix = true
-	algorithm = patience
+  algorithm = patience
 [rerere]
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
@@ -127,3 +127,5 @@
 [user]
   name = David Kariukí
   email = davidkariuki@users.noreply.github.com
+[init]
+  defaultBranch = main
