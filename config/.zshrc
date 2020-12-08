@@ -127,7 +127,6 @@ export MANPATH="${MANPATH-$(manpath)}:$YARN_GLOBAL/share/man"
 export PATH=$PATH:/snap/bin
 export N_PREFIX=$YARN_GLOBAL
 prompt_context(){}
-eval "$(hub alias -s)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
