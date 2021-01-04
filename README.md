@@ -1,4 +1,4 @@
-### dotfiles
+# .files
 
 Instructions are for Ubuntu-based distributions.
 
@@ -7,53 +7,90 @@ Instructions are for Ubuntu-based distributions.
 ![Neovim](https://github.com/davidkariuki/dotfiles/raw/main/screenshots/nvim.png "Neovim")
 ![Alacritty](https://github.com/davidkariuki/dotfiles/raw/main/screenshots/terminal.png "Alacritty")
 
-#### Binaries
+### Fonts
+
+Install the font in ./font
+
+## Binaries
+
+### Alacritty
+
+```zsh
+sudo add-apt-repository ppa:aslatter/ppa
+sudo apt-get install -y alacritty
+mkdir -p ~/.config/alacritty/alacritty
+```
+
+### Base
 
 ```zsh
 sudo apt-get install -y zsh vim-gtk3 tmux tig bat snapd
 sudo snap install --edge nvim --classic
 ```
 
-Ripgrep apt installation is currently broken
+### Github CLI
+
+Get the latest [binary](https://github.com/cli/cli/releases), install and log
+in:
 
 ```zsh
-apt-get download ripgrep
-sudo dpkg --force-overwrite -i ripgrep*.deb
+gh auth login
 ```
 
-- oh-my-zsh
+### Ripgrep
+
+Get the latest Ripgrep [binary](https://github.com/BurntSushi/ripgrep/releases)
+and install
+
+#### Nvim config
+
+```zsh
+mkdir -p ~/.config/nvim
+```
+
+#### Dotfile symlinks
+
+```zsh
+hub clone davidkariuki/dotfiles
+cd dotfiles && ./install.sh
+```
+
+### Zsh plugins
+
+#### oh-my-zsh (requires reboot)
 
 ```zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-- zsh-autosuggestions
+#### zsh-autosuggestions
 
 ```zsh
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+gh repo clone zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
-- fast-syntax-highlighting
+#### fast-syntax-highlighting
 
 ```zsh
-git clone https://github.com/zdharma/fast-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+gh repo clone zdharma/fast-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 ```
 
-- powerlevel10k
+#### powerlevel10k
 
 ```zsh
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+gh repo clone --depth=1 romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-- Tmux plugins
+### Tmux plugins
 
 ```zsh
-hub clone tmux-plugins/tpm ~/.tmux/plugins/tpm
+mkdir -p ~/.tmux/plugins
+gh repo clone tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-- start tmux and run `C-a I`
+Start a new tmux session and run `C-a I`
 
-- yarn
+### yarn
 
 ```zsh
 sudo apt install npm
@@ -65,37 +102,14 @@ npm i -g yarn
 yarn config set prefix '~/.yarn-global'
 ```
 
-- yarn binaries
+### yarn binaries
 
 ```zsh
-yarn global add typescript vercel eslint prettier n
+yarn global add typescript eslint prettier n
 ```
 
-- node
+### node
 
 ```zsh
 n latest
-```
-
-#### Fonts
-
-- Install the font in ./font
-
-#### Nvim config
-
-```zsh
-mkdir -p ~/.config/nvim
-```
-
-### Alacritty config
-
-```zsh
-mkdir -p ~/.config/alacritty/alacritty
-```
-
-#### Dotfile symlinks
-
-```zsh
-hub clone davidkariuki/dotfiles
-cd dotfiles && ./install.sh
 ```
