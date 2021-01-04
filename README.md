@@ -13,6 +13,13 @@ Install the font in ./font
 
 ## Binaries
 
+### Base
+
+```zsh
+sudo apt-get install -y zsh vim-gtk3 tmux tig bat snapd
+sudo snap install --edge nvim --classic
+```
+
 ### Alacritty
 
 ```zsh
@@ -21,12 +28,10 @@ sudo apt-get install -y alacritty
 mkdir -p ~/.config/alacritty/alacritty
 ```
 
-### Base
+### Ripgrep
 
-```zsh
-sudo apt-get install -y zsh vim-gtk3 tmux tig bat snapd
-sudo snap install --edge nvim --classic
-```
+Get the latest Ripgrep [binary](https://github.com/BurntSushi/ripgrep/releases)
+and install
 
 ### Github CLI
 
@@ -37,10 +42,7 @@ in:
 gh auth login
 ```
 
-### Ripgrep
-
-Get the latest Ripgrep [binary](https://github.com/BurntSushi/ripgrep/releases)
-and install
+## Config
 
 #### Nvim config
 
@@ -55,9 +57,9 @@ hub clone davidkariuki/dotfiles
 cd dotfiles && ./install.sh
 ```
 
-### Zsh plugins
+## Plugins
 
-#### oh-my-zsh (requires reboot)
+#### oh-my-zsh
 
 ```zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -81,7 +83,9 @@ gh repo clone zdharma/fast-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom
 gh repo clone --depth=1 romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-### Tmux plugins
+Reboot to pick up the Zsh config
+
+#### Tmux plugins
 
 ```zsh
 mkdir -p ~/.tmux/plugins
@@ -90,7 +94,7 @@ gh repo clone tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 Start a new tmux session and run `C-a I`
 
-### yarn
+## yarn & npm
 
 ```zsh
 sudo apt install npm
@@ -102,13 +106,13 @@ npm i -g yarn
 yarn config set prefix '~/.yarn-global'
 ```
 
-### yarn binaries
+#### yarn binaries
 
 ```zsh
 yarn global add typescript eslint prettier n
 ```
 
-### node
+#### node
 
 ```zsh
 n latest
