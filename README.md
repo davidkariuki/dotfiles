@@ -16,7 +16,7 @@ Install the font in ./font
 ### Base
 
 ```zsh
-sudo apt-get install -y zsh vim-gtk3 tmux tig bat snapd
+sudo apt-get install -y zsh vim-gtk3 tmux tig bat snapd neofetch
 sudo snap install --edge nvim --classic
 ```
 
@@ -109,7 +109,7 @@ yarn config set prefix '~/.yarn-global'
 #### yarn binaries
 
 ```zsh
-yarn global add typescript eslint prettier n
+yarn global add typescript prettier n
 ```
 
 #### node
