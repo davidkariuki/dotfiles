@@ -32,5 +32,7 @@
   "solargraph.formatting": true,
   "solargraph.autoformat": true,
   "solargraph.rename": true,
-  "solargraph.completion": true
+  "solargraph.completion": true,
+  "css.lint.unknownAtRules": "ignore",
+  "css.validate": false
 }
