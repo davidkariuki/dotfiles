@@ -126,7 +126,6 @@ export PATH=$PATH:$LOCAL_PATH/bin
 export MANPATH="${MANPATH-$(manpath)}:$YARN_GLOBAL/share/man"
 export PATH=$PATH:/snap/bin
 export N_PREFIX=$YARN_GLOBAL
-export GOOGLE_APPLICATION_CREDENTIALS="/home/me/projects/mastered/scripts/gcp-key.json"
 prompt_context(){}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
