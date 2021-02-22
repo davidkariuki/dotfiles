@@ -11,6 +11,9 @@ endif
 " plugins
 source ~/.config/nvim/plugins.vim
 
+set ignorecase " Ignore case when searching
+set smartcase " Ignore case when searching lowercase
+
 if exists('g:vscode')
   nmap <leader>w :w<cr>
   nmap <leader>v :vsp ~/.vimrc<cr>
@@ -75,8 +78,6 @@ else
   " Searching *******************************************************************
   set hlsearch  " highlight search
   set incsearch  " incremental search, search as you type
-  set ignorecase " Ignore case when searching
-  set smartcase " Ignore case when searching lowercase
   nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 
