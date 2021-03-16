@@ -128,9 +128,6 @@ export PATH=$PATH:/snap/bin
 export N_PREFIX=$YARN_GLOBAL
 prompt_context(){}
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-eval "$(rbenv init -)"
 
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/me/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -144,3 +141,8 @@ else
     fi
 fi
 unset __conda_setup
+
+#eval "$(rbenv init -)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
