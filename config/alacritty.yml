@@ -1,37 +1,30 @@
+env:
+  TERM: xterm-256color
+
 font:
   size: 10.5
   normal:
     family: "MesloLGS NF"
 
 colors:
-  # Default colors
   primary:
-    background: '#282c34'
-    foreground: '#abb2bf'
-
-  # Normal colors
+    background: "#282c34"
+    foreground: "#abb2bf"
+  cursor:
+    text: CellBackground
+    cursor: "#528bff" # syntax-cursor-color
+  selection:
+    text: CellForeground
+    background: "#3e4451" # syntax-selection-color
   normal:
-    # NOTE: Use '#131613' for the `black` color if you'd like to see
-    # black text on the background.
-    black:   '#282c34'
-    red:     '#e06c75'
-    green:   '#98c379'
-    yellow:  '#d19a66'
-    blue:    '#61afef'
-    magenta: '#c678dd'
-    cyan:    '#56b6c2'
-    white:   '#abb2bf'
-
-  # Bright colors
-  bright:
-    black:   '#5c6370'
-    red:     '#e06c75'
-    green:   '#98c379'
-    yellow:  '#d19a66'
-    blue:    '#61afef'
-    magenta: '#c678dd'
-    cyan:    '#56b6c2'
-    white:   '#ffffff'
+    black: "#5c6370" # mono-3
+    red: "#e06c75" # red 1
+    green: "#98c379"
+    yellow: "#e5c07b" # orange 2
+    blue: "#61afef"
+    magenta: "#c678dd"
+    cyan: "#56b6c2"
+    white: "#828997" # mono-2
 
 window:
   dimensions:
@@ -47,4 +40,3 @@ window:
 
 key_bindings:
   - { key: F11, action: ToggleFullscreen }
-

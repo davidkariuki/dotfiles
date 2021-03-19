@@ -114,7 +114,6 @@ export BAT_THEME="TwoDark"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias k="kubectl"
 alias cat="batcat"
 
 YARN_GLOBAL="${HOME}/.yarn-global"
@@ -128,6 +127,7 @@ export PATH=$PATH:/snap/bin
 export N_PREFIX=$YARN_GLOBAL
 prompt_context(){}
 
+#eval "$(rbenv init -)"
 
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/me/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
