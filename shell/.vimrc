@@ -1,28 +1,9 @@
-" Remap Leader  ***************************************************************
-let mapleader=","
 
-" vim-plug Plugins **************************************************************
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-" plugins
-source ~/.config/nvim/plugins.vim
-
-set ignorecase " Ignore case when searching
-set smartcase " Ignore case when searching lowercase
 
 if exists('g:vscode')
   nmap <leader>w :w<cr>
   nmap <leader>v :vsp ~/.vimrc<cr>
 else
-  " Plugin-specific settings
-  source ~/.config/nvim/glyph-palette-settings.vim
-  source ~/.config/nvim/fern-settings.vim
-  source ~/.config/nvim/coc-settings.vim
-  source ~/.config/nvim/fzf-settings.vim
 
   " Indentline settings
   let g:indentLine_char = '│'
@@ -92,18 +73,6 @@ else
   inoremap <expr> <c-k> ("\<C-p>")
   set pastetoggle=<leader>p
 
-  " Speedy.vim ********************************************************************
-  set ttyfast " you got a fast terminal
-  set lazyredraw " to avoid scrolling problems
-  set timeoutlen=250
 
-  " Cursorline/CursorColumn for current window only ****************
-  augroup Cursor
-    au!
-    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-    au WinLeave * setlocal nocursorline
-    au VimEnter,WinEnter,BufWinEnter * setlocal cursorcolumn
-    au WinLeave * setlocal nocursorcolumn
-  augroup END
 endif
 
