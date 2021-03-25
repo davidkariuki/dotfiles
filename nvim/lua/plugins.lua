@@ -4,14 +4,18 @@ return require("packer").startup(function()
 
   -- Color scheme
   use { "rakr/vim-one" }
+  use { "vim-airline/vim-airline" }
+  use { "vim-airline/vim-airline-themes" }
 
   -- Syntax
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+  use { "norcalli/nvim-colorizer.lua" }
+  use { "jiangmiao/auto-pairs" }
 
   -- Fuzzy finder
   use {
-      "nvim-telescope/telescope.nvim",
-      requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
+    "nvim-telescope/telescope.nvim",
+    requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
   }
 
   -- LSP and completion
@@ -24,17 +28,24 @@ return require("packer").startup(function()
   use { "airblade/vim-gitgutter" }
 
   -- Drawer
-  use { "kyazdani42/nvim-web-devicons" }
-  use { "kyazdani42/nvim-tree.lua" }
+  use {
+    "kyazdani42/nvim-tree.lua",
+    requires = {{"kyazdani42/nvim-web-devicons"}}
+  }
 
-  -- Misc
-  use { "mhinz/vim-startify" }
-  use { "mattn/emmet-vim" }
-  use { "ap/vim-css-color" }
-  use { "Yggdroot/indentLine" }
-  use { "preservim/nerdcommenter" }
+  -- Surround
+  use { "tpope/vim-surround" }
+
+  -- Motion
+  use { "phaazon/hop.nvim" }
   use { "christoomey/vim-tmux-navigator" }
-  use { "vim-airline/vim-airline" }
-  use { "vim-airline/vim-airline-themes" }
-  use { "jiangmiao/auto-pairs" }
+  
+  -- Emmet
+  use { "mattn/emmet-vim" }
+
+  -- Indentline
+  use { "Yggdroot/indentLine" }
+
+  -- Commenter
+  use { "preservim/nerdcommenter" }
 end)
