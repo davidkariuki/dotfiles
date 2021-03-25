@@ -21,6 +21,7 @@ return require("packer").startup(function()
   -- LSP and completion
   use { "neovim/nvim-lspconfig" }
   use { "nvim-lua/completion-nvim" }
+  use { 'tjdevries/nlua.nvim' }
 
   -- Git
   use { "tpope/vim-fugitive" }
@@ -39,7 +40,7 @@ return require("packer").startup(function()
   -- Motion
   use { "phaazon/hop.nvim" }
   use { "christoomey/vim-tmux-navigator" }
-  
+
   -- Emmet
   use { "mattn/emmet-vim" }
 
