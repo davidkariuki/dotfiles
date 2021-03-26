@@ -4,9 +4,10 @@ return require("packer").startup(function()
 
   -- Color scheme
   use { "rakr/vim-one" }
-  use { "vim-airline/vim-airline" }
-  use { "vim-airline/vim-airline-themes" }
+  -- use { "vim-airline/vim-airline" }
+  -- use { "vim-airline/vim-airline-themes" }
 
+  
   -- Syntax
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use { "norcalli/nvim-colorizer.lua" }
@@ -20,8 +21,8 @@ return require("packer").startup(function()
 
   -- LSP and completion
   use { "neovim/nvim-lspconfig" }
-  use { "nvim-lua/completion-nvim" }
-  use { 'tjdevries/nlua.nvim' }
+  use { "kabouzeid/nvim-lspinstall" }
+  use { "hrsh7th/nvim-compe" }
 
   -- Git
   use { "tpope/vim-fugitive" }

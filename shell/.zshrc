@@ -128,6 +128,8 @@ export N_PREFIX=$YARN_GLOBAL
 prompt_context(){}
 
 #eval "$(rbenv init -)"
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
 
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/me/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"

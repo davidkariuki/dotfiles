@@ -25,3 +25,6 @@ require("plugins")
 
 -- Plugin Config
 require("config")
+
+-- LSP config
+require("lsp")

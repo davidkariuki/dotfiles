@@ -19,13 +19,15 @@ utils.opt("o", "shiftround", true)
 utils.opt("o", "splitbelow", true)
 utils.opt("o", "splitright", true)
 utils.opt("o", "wildmode", "list:longest")
-utils.opt("o", "clipboard","unnamed,unnamedplus")
+-- utils.opt("o", "clipboard","unnamed,unnamedplus")
 utils.opt("o", "pastetoggle", "<Leader>p")
 utils.opt("o", "ch", 1)
 utils.opt("w", "number", true)
 utils.opt("w", "cursorline", true)
 utils.opt("w", "relativenumber", true)
 utils.opt("w", "wrap", false)
+vim.o.completeopt = "menuone,noselect"
+
 
 -- Highlight on yank
 vim.cmd "au TextYankPost * lua vim.highlight.on_yank {on_visual = false}"
