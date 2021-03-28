@@ -26,8 +26,23 @@ utils.opt("w", "number", true)
 utils.opt("w", "cursorline", true)
 utils.opt("w", "relativenumber", true)
 utils.opt("w", "wrap", false)
-vim.o.completeopt = "menuone,noselect"
-
+vim.o.completeopt = "menu,menuone,noselect"
 
 -- Highlight on yank
 vim.cmd "au TextYankPost * lua vim.highlight.on_yank {on_visual = false}"
+
+-- colorscheme
+utils.opt("o", "termguicolors", true)
+utils.opt("o", "background", "dark")
+cmd "colorscheme one"
+
+-- completion
+utils.opt("o", "completeopt", "menuone,noinsert,noselect")
+vim.cmd [[set shortmess+=c]]
+vim.g.completion_confirm_key = ""
+vim.g.completion_matching_strategy_list = {"exact", "substring", "fuzzy"}
+
+-- <Tab> to navigate the completion menu
+utils.map("i", "<S-Tab>", "pumvisible() ? '\\<C-p>' : '\\<Tab>'", {expr = true})
+utils.map("i", "<Tab>", "pumvisible() ? '\\<C-n>' : '\\<Tab>'", {expr = true})
+

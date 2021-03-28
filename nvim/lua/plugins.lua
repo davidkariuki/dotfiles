@@ -7,9 +7,9 @@ return require("packer").startup(function()
   -- use { "vim-airline/vim-airline" }
   -- use { "vim-airline/vim-airline-themes" }
 
-  
   -- Syntax
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+  use { 'p00f/nvim-ts-rainbow' }
   use { "norcalli/nvim-colorizer.lua" }
   use { "jiangmiao/auto-pairs" }
 
@@ -23,6 +23,7 @@ return require("packer").startup(function()
   use { "neovim/nvim-lspconfig" }
   use { "kabouzeid/nvim-lspinstall" }
   use { "hrsh7th/nvim-compe" }
+  use { "glepnir/lspsaga.nvim" }
 
   -- Git
   use { "tpope/vim-fugitive" }
@@ -51,3 +52,4 @@ return require("packer").startup(function()
   -- Commenter
   use { "preservim/nerdcommenter" }
 end)
+
