@@ -1,17 +1,17 @@
 return require("packer").startup(function()
   -- Packer can manage itself as an optional plugin
-  use {"wbthomason/packer.nvim", opt = true}
+  use { "wbthomason/packer.nvim", opt = true }
 
-  -- Color scheme
+  -- Syntax / Linting
   use { "rakr/vim-one" }
-  -- use { "vim-airline/vim-airline" }
-  -- use { "vim-airline/vim-airline-themes" }
-
-  -- Syntax
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use { 'p00f/nvim-ts-rainbow' }
   use { "norcalli/nvim-colorizer.lua" }
   use { "jiangmiao/auto-pairs" }
+  use { "preservim/nerdcommenter" }
+  use { "Yggdroot/indentLine" }
+  use { "mattn/emmet-vim" }
+  use { "tpope/vim-surround" }
 
   -- Fuzzy finder
   use {
@@ -35,21 +35,8 @@ return require("packer").startup(function()
     "kyazdani42/nvim-tree.lua",
     requires = {{"kyazdani42/nvim-web-devicons"}}
   }
-
-  -- Surround
-  use { "tpope/vim-surround" }
-
-  -- Motion
+  -- Navigation
   use { "phaazon/hop.nvim" }
   use { "christoomey/vim-tmux-navigator" }
-
-  -- Emmet
-  use { "mattn/emmet-vim" }
-
-  -- Indentline
-  use { "Yggdroot/indentLine" }
-
-  -- Commenter
-  use { "preservim/nerdcommenter" }
 end)
 
