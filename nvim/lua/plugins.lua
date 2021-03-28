@@ -5,7 +5,7 @@ return require("packer").startup(function()
   -- Syntax / Linting
   use { "rakr/vim-one" }
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-  use { 'p00f/nvim-ts-rainbow' }
+  use { "p00f/nvim-ts-rainbow" }
   use { "norcalli/nvim-colorizer.lua" }
   use { "jiangmiao/auto-pairs" }
   use { "preservim/nerdcommenter" }
@@ -24,6 +24,8 @@ return require("packer").startup(function()
   use { "kabouzeid/nvim-lspinstall" }
   use { "hrsh7th/nvim-compe" }
   use { "glepnir/lspsaga.nvim" }
+  use { "onsails/lspkind-nvim" }
+
 
   -- Git
   use { "tpope/vim-fugitive" }
