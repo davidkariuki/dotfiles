@@ -46,3 +46,6 @@ vim.g.completion_matching_strategy_list = {"exact", "substring", "fuzzy"}
 utils.map("i", "<S-Tab>", "pumvisible() ? '\\<C-p>' : '\\<Tab>'", {expr = true})
 utils.map("i", "<Tab>", "pumvisible() ? '\\<C-n>' : '\\<Tab>'", {expr = true})
 
+-- Formatoptions
+cmd "au BufEnter * set fo-=c fo-=r fo-=o"
+
