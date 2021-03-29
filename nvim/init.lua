@@ -14,14 +14,14 @@ vim.cmd [[packadd packer.nvim]]
 -- Auto-compile plugin changes
 vim.cmd "autocmd BufWritePost plugins.lua PackerCompile"
 
--- General settings
-require("settings")
-
--- Keybinds
-require("keybinds")
-
 -- Install plugins
 require("plugins")
 
 -- Plugin Config
 require("config")
+
+-- General settings
+require("settings")
+
+-- Keybinds
+require("keybinds")
