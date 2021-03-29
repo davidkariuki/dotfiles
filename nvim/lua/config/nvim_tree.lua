@@ -7,7 +7,7 @@ vim.g.nvim_tree_bindings = {
 }
 
 vim.g.nvim_tree_ignore = { ".git", "node_modules", ".cache" }
-vim.g.nvim_tree_auto_open = 1
+vim.g.nvim_tree_auto_open = 0
 vim.g.nvim_tree_auto_close = 1
 vim.g.nvim_tree_tab_open = 1
 vim.g.nvim_tree_show_icons = { ["git"]= 1, ["folders"]= 1, ["files"] = 1 }

@@ -9,3 +9,8 @@ utils.map("n", "<Leader>f", "<cmd>NvimTreeFindFile<cr>")
 utils.map("n", "<Leader>n", "<cmd>NvimTreeToggle<cr>")
 utils.map("n", "<leader>a", "<cmd>Lspsaga code_action<CR>")
 utils.map("n", "<Leader>gs", "<cmd>Gstatus<CR>")
+utils.map('n', "<C-p>", "<cmd>Telescope find_files find_command=rg,--ignore,--files<cr>", { noremap = true, silent = true})
+utils.map("n", "<Leader>g", "<cmd>Telescope live_grep<CR>", { noremap = true })
+utils.map("n", "<Leader>b", "<cmd>Telescope buffers<CR>",  { noremap = true } )
+
+-- utils.map("n", "<C-p>", "<cmd>Telescope git_files hidden=true prompt_prefix=🔍<CR>", { noremap = true })
