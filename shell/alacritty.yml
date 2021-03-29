@@ -7,6 +7,9 @@ font:
     family: "MesloLGS NF"
 
 colors:
+  cursor:
+    text: "#ffffff"
+    cursor: "#DC6F02"
   primary:
     background: "#282c34"
     foreground: "#abb2bf"
