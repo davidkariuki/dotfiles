@@ -6,6 +6,7 @@ cmd "syntax enable"
 cmd "filetype plugin indent on"
 
 utils.opt("b", "shiftwidth", indent)
+utils.opt("b", "autoindent", true)
 utils.opt("b", "smartindent", true)
 utils.opt("b", "expandtab", true)
 utils.opt("b", "tabstop", indent)
