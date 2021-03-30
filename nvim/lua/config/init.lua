@@ -1,5 +1,4 @@
 require("config.compe")
-require("config.emmet")
 require("config.indentline")
 require("config.lsp")
 require("config.lualine")
