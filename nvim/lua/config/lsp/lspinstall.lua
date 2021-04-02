@@ -18,11 +18,17 @@ local on_attach = function(client, bufnr)
   -- Set autocommands conditional on server_capabilities
   if client.resolved_capabilities.document_highlight then
     vim.api.nvim_exec([[
-    augroup lsp_document_highlight
-    autocmd! * <buffer>
-    autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-    autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-    augroup END
+      hi LspDiagnosticsVirtualTextError guifg=Red ctermfg=Red
+      hi LspDiagnosticsVirtualTextWarning guifg=Yellow ctermfg=Yellow
+      hi LspDiagnosticsVirtualTextInformation guifg=Blue ctermfg=Blue
+      hi LspDiagnosticsVirtualTextHint guifg=White ctermfg=White
+
+      augroup lsp_document_highlight
+      autocmd! * <buffer>
+      autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+      autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
+      autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+      augroup END
     ]], false)
   end
 end
@@ -81,6 +87,32 @@ local function setup_servers()
     require"lspconfig"[server].setup(config)
   end
 end
+
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    -- Enable underline, use default values
+    underline = true,
+    -- Enable virtual text, override spacing to 4
+    virtual_text = {
+      spacing = 4,
+      prefix = "»",
+    },
+    -- Use a function to dynamically turn signs off
+    -- and on, using buffer local variables
+    signs = function(bufnr, client_id)
+      local ok, result = pcall(vim.api.nvim_buf_get_var, bufnr, 'show_signs')
+      -- No buffer local variable set, so just enable by default
+      if not ok then
+        return true
+      end
+
+      return result
+    end,
+    -- Disable a feature
+    update_in_insert = false,
+  }
+)
 
 setup_servers()
 -- Automatically reload after `:LspInstall <server>` so we don"t have to restart neovim

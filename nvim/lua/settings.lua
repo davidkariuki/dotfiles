@@ -20,13 +20,13 @@ utils.opt("o", "shiftround", true)
 utils.opt("o", "splitbelow", true)
 utils.opt("o", "splitright", true)
 utils.opt("o", "wildmode", "list:longest")
--- utils.opt("o", "clipboard","unnamed,unnamedplus")
 utils.opt("o", "pastetoggle", "<Leader>p")
 utils.opt("o", "ch", 1)
 utils.opt("w", "number", true)
 utils.opt("w", "cursorline", true)
 utils.opt("w", "relativenumber", true)
 utils.opt("w", "wrap", false)
+utils.opt("w", "signcolumn", "yes")
 
 -- Highlight on yank
 cmd "au TextYankPost * lua vim.highlight.on_yank {on_visual = false}"
@@ -41,6 +41,8 @@ utils.opt("o", "completeopt", "menu,menuone,noinsert,noselect")
 cmd [[set shortmess+=c]]
 vim.g.completion_confirm_key = ""
 vim.g.completion_matching_strategy_list = {"exact", "substring", "fuzzy"}
+vim.g.diagnostic_enable_underline = 1
+
 
 -- <Tab> to navigate the completion menu
 utils.map("i", "<S-Tab>", "pumvisible() ? '\\<C-p>' : '\\<Tab>'", {expr = true})
