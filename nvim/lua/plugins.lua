@@ -11,6 +11,7 @@ return require("packer").startup(function()
   use { "jiangmiao/auto-pairs" }
   use { "preservim/nerdcommenter" }
   use { "Yggdroot/indentLine" }
+  use { "lukas-reineke/indent-blankline.nvim" }
   use { "mattn/emmet-vim" }
   use { "tpope/vim-surround" }
 
