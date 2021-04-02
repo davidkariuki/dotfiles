@@ -19,6 +19,7 @@ return require("packer").startup(function()
     "nvim-telescope/telescope.nvim",
     requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
   }
+  use { "kevinhwang91/nvim-bqf" }
 
   -- LSP and completion
   use { "neovim/nvim-lspconfig" }

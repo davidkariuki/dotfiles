@@ -1,6 +1,6 @@
+require("config.lsp")
 require("config.compe")
 require("config.indentline")
-require("config.lsp")
 require("config.lualine")
 require("config.nerd_commenter")
 require("config.nvim_tree")

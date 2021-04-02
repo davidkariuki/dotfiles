@@ -1,4 +1,3 @@
--- keymaps
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -70,7 +69,6 @@ local function setup_servers()
   local servers = require"lspinstall".installed_servers()
   -- ... and add manually installed servers
   -- table.insert(servers, "clangd")
-  -- table.insert(servers, "sourcekit")
 
   for _, server in pairs(servers) do
     local config = make_config()
@@ -85,18 +83,8 @@ local function setup_servers()
 end
 
 setup_servers()
-
 -- Automatically reload after `:LspInstall <server>` so we don"t have to restart neovim
 require"lspinstall".post_install_hook = function ()
   setup_servers() -- reload installed servers
   vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
 end
-
-
--- LSP saga
-local saga = require "lspsaga"
-saga.init_lsp_saga()
-
--- LSP kind
-require("lspkind").init({})
-
