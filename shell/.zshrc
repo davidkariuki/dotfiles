@@ -128,6 +128,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export N_PREFIX=$YARN_GLOBAL
 prompt_context(){}
 
+eval "$(rbenv init -)"
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
 
@@ -144,7 +145,6 @@ else
 fi
 unset __conda_setup
 
-eval "$(rbenv init -)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
