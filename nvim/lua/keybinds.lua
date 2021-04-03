@@ -1,10 +1,8 @@
-local utils = require("utils")
-
 vim.api.nvim_set_keymap("n", "<Leader><Leader>", "<cmd>noh<CR>", { noremap = true })
 vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>w", "<cmd>up<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>d", "<cmd>pu=strftime('%b %d, %Y %X')<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "\\", "<cmd>lua require'hop'.hint_words()<cr>", , { noremap = true })
+vim.api.nvim_set_keymap("n", "\\", "<cmd>lua require'hop'.hint_words()<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>f", "<cmd>NvimTreeFindFile<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>n", "<cmd>NvimTreeToggle<cr>", { noremap = true })
 -- vim.api.nvim_set_keymap("n", "<leader>a", "<cmd>Lspsaga code_action<CR>", { noremap = true })
