@@ -10,6 +10,10 @@ local on_attach = function(client, bufnr)
       hi LspDiagnosticsVirtualTextWarning guifg=Yellow ctermfg=Yellow
       hi LspDiagnosticsVirtualTextInformation guifg=Blue ctermfg=Blue
       hi LspDiagnosticsVirtualTextHint guifg=White ctermfg=White
+      hi LspDiagnosticsUnderlineError gui=undercurl guisp=red term=undercurl cterm=undercurl
+      hi LspDiagnosticsUnderlineWarning gui=undercurl guisp=Yellow term=undercurl cterm=undercurl
+      hi LspDiagnosticsUnderlineInformation gui=undercurl guisp=Blue term=undercurl cterm=undercurl
+      hi LspDiagnosticsUnderlineHint gui=undercurl guisp=White term=undercurl cterm=undercurl
     ]], false)
   end
 end

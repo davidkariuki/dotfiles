@@ -34,4 +34,5 @@ saga.init_lsp_saga {
 }
 
 vim.cmd "autocmd CursorHold  * :Lspsaga show_line_diagnostics"
--- vim.cmd "highlight default LspSagaDiagnosticBorder guifg=#3bb6c4 guibg=NONE "
+vim.cmd "highlight default LspSagaDiagnosticBorder guifg=#abb2bf guibg=NONE "
+vim.cmd "highlight default LspSagaDiagnosticTruncateLine guifg=#abb2bf guibg=NONE "
