@@ -15,13 +15,14 @@ vim.cmd [[packadd packer.nvim]]
 vim.cmd "autocmd BufWritePost plugins.lua PackerCompile"
 
 -- Install plugins
-require("plugins")
+ require("plugins")
+
+-- Plugin Config
+ require("config")
+
+-- Keybinds
+require("keybinds")
 
 -- General settings
 require("settings")
 
--- Plugin Config
-require("config")
-
--- Keybinds
-require("keybinds")

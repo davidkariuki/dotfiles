@@ -3,12 +3,12 @@ local indent = 2
 vim.cmd "syntax enable"
 vim.cmd "filetype plugin indent on"
 
-vim.bo.shiftwidth = indent
-vim.bo.autoindent = true
-vim.bo.smartindent = true
-vim.bo.expandtab = true
-vim.bo.tabstop = indent
-vim.bo.softtabstop = indent
+vim.o.tabstop = indent
+vim.o.softtabstop = indent
+vim.o.shiftwidth = indent
+vim.o.autoindent = true
+vim.o.smartindent = true
+vim.o.expandtab = true
 vim.o.hidden = true
 vim.o.ruler = true
 vim.o.ignorecase = true
