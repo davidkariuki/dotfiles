@@ -18,7 +18,7 @@ return require("packer").startup(function(use)
   -- Fuzzy finder
   use {
     "nvim-telescope/telescope.nvim",
-    requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
+    requires = {{ "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" }}
   }
   use { "kevinhwang91/nvim-bqf" }
 
@@ -37,7 +37,7 @@ return require("packer").startup(function(use)
   -- Drawer
   use {
     "kyazdani42/nvim-tree.lua",
-    requires = {{"kyazdani42/nvim-web-devicons"}}
+    requires = {{ "kyazdani42/nvim-web-devicons" }}
   }
   -- Navigation
   use { "phaazon/hop.nvim" }

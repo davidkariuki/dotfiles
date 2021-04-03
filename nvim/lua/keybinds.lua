@@ -18,8 +18,8 @@ vim.api.nvim_set_keymap("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", { noremap = tr
 vim.api.nvim_set_keymap("n", "ge", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "gn", "<cmd>Lspsaga diagnostic_jump_next<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "gp", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-j>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-k>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "gr", "<cmd>Lspsaga rename<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<A-t>", "<cmd>Lspsaga open_floaterm<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<A-t>", "<C-\\><C-n><cmd>Lspsaga close_floaterm<CR>", { noremap = true, silent = true })
-
+vim.api.nvim_set_keymap("n", "<C-f>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-b>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", { noremap = true, silent = true })
