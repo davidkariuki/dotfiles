@@ -1,6 +1,6 @@
 # .files
 
-Instructions are for Ubuntu-based distributions.
+Instructions are for Arch-based distributions.
 
 #### Screenshot
 
@@ -9,55 +9,41 @@ Instructions are for Ubuntu-based distributions.
 
 ### Fonts
 
-Install the font in ./font
+Install the fonts in ./font
 
 ## Binaries
 
 ### Base
 
 ```zsh
-sudo apt-get install -y zsh vim-gtk3 tmux tig bat snapd neofetch
-sudo snap install --edge nvim --classic
+sudo pacman -S --needed zsh tmux bat neofetch alacritty lazygit github-cli npm
+yay -S --needed bottom rbenv ruby-build rg
 ```
-
-### Alacritty
-
-```zsh
-sudo add-apt-repository ppa:aslatter/ppa
-sudo apt-get install -y alacritty
-mkdir -p ~/.config/alacritty/alacritty
-```
-
-### Ripgrep
-
-Get the latest Ripgrep [binary](https://github.com/BurntSushi/ripgrep/releases)
-and install
 
 ### Github CLI
-
-Get the latest [binary](https://github.com/cli/cli/releases), install and log
-in:
 
 ```zsh
 gh auth login
 ```
 
-## Config
-
-#### Nvim config
+## Config dirs
 
 ```zsh
 mkdir -p ~/.config/nvim
+mkdir -p ~/.config/alacritty/alacritty
+mkdir -p ~/.tmux/plugins
+mkdir ~/.npm-global
+mkdir ~/.yarn-global
 ```
 
 #### Dotfile symlinks
 
 ```zsh
-hub clone davidkariuki/dotfiles
+gh repo clone davidkariuki/dotfiles
 cd dotfiles && ./install.sh
 ```
 
-## Plugins
+## Plugin setup
 
 #### oh-my-zsh
 
@@ -80,7 +66,7 @@ gh repo clone zdharma/fast-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom
 #### powerlevel10k
 
 ```zsh
-gh repo clone --depth=1 romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --depth=1 romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
 Reboot to pick up the Zsh config
@@ -88,7 +74,6 @@ Reboot to pick up the Zsh config
 #### Tmux plugins
 
 ```zsh
-mkdir -p ~/.tmux/plugins
 gh repo clone tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
@@ -97,9 +82,6 @@ Start a new tmux session and run `C-a I`
 ## yarn & npm
 
 ```zsh
-sudo apt install npm
-mkdir ~/.npm-global
-mkdir ~/.yarn-global
 npm config set prefix '~/.npm-global'
 
 npm i -g yarn
