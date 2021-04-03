@@ -1,4 +1,5 @@
 require("config.compe")
+require("config.lspsaga")
 require("config.indentline")
 require("config.lualine")
 require("config.nerd_commenter")
