@@ -114,7 +114,7 @@ export BAT_THEME="TwoDark"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cat="batcat"
+alias cat="bat"
 alias vim="nvim"
 
 YARN_GLOBAL="${HOME}/.yarn-global"
