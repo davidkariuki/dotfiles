@@ -51,3 +51,11 @@ utils.map("i", "<Tab>", "pumvisible() ? '\\<C-n>' : '\\<Tab>'", {expr = true})
 -- Formatoptions
 cmd "au BufEnter * set fo-=c fo-=r fo-=o"
 
+-- LSP diagnostics
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    underline = true,
+    virtual_text = false,
+    update_in_insert = false,
+  }
+)

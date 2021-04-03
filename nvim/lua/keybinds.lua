@@ -13,4 +13,4 @@ utils.map('n', "<C-p>", "<cmd>Telescope git_files find_command=rg,--ignore,--hid
 utils.map("n", "<Leader>g", "<cmd>Telescope live_grep<CR>", { noremap = true })
 utils.map("n", "<Leader>b", "<cmd>Telescope buffers<CR>",  { noremap = true } )
 
-utils.map("i", "<CR>", "compe#confirm()", { expr = true })
+-- utils.map("i", "<CR>", "compe#confirm()", { expr = true })

@@ -1,4 +1,5 @@
-require "config.lsp.lspconfig"
+-- Config
 require "config.lsp.lspinstall"
 require "config.lsp.lspkind"
+
 

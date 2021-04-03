@@ -1,4 +1,4 @@
-return require("packer").startup(function()
+return require("packer").startup(function(use)
   -- Packer can manage itself as an optional plugin
   use { "wbthomason/packer.nvim", opt = true }
 
@@ -7,7 +7,7 @@ return require("packer").startup(function()
   use { "hoob3rt/lualine.nvim" }
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use { "p00f/nvim-ts-rainbow" }
-  use { "norcalli/nvim-colorizer.lua" }
+  use { "RRethy/vim-hexokinase", run = "make hexokinase"}
   use { "jiangmiao/auto-pairs" }
   use { "preservim/nerdcommenter" }
   use { "Yggdroot/indentLine" }
