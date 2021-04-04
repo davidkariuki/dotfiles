@@ -15,6 +15,7 @@ return require("packer").startup(function(use)
   use { "lukas-reineke/indent-blankline.nvim" }
   use { "mattn/emmet-vim" }
   use { "tpope/vim-surround" }
+  use { "karb94/neoscroll.nvim" }
 
   -- Fuzzy finder
   use {
