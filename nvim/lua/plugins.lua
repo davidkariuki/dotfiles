@@ -4,7 +4,8 @@ return require("packer").startup(function(use)
 
   -- Syntax / Linting
   use { "rakr/vim-one" }
-  use { "hoob3rt/lualine.nvim" }
+  -- use { "hoob3rt/lualine.nvim" }
+  use { "glepnir/galaxyline.nvim" }
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use { "p00f/nvim-ts-rainbow" }
   use { "RRethy/vim-hexokinase", run = "make hexokinase"}
