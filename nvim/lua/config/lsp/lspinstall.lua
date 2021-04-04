@@ -16,6 +16,13 @@ local on_attach = function(client, bufnr)
       hi LspDiagnosticsUnderlineHint gui=undercurl guisp=White term=undercurl cterm=undercurl
     ]], false)
   end
+
+  if client.resolved_capabilities.document_formatting then
+    vim.api.nvim_command [[augroup Format]]
+    vim.api.nvim_command [[autocmd! * <buffer>]]
+    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 1000)]]
+    vim.api.nvim_command [[augroup END]]
+  end
 end
 
 -- Configure lua language server for neovim development
