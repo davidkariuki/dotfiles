@@ -3,5 +3,5 @@ ln -fs $(pwd)/shell/.gitconfig ~/.gitconfig
 ln -fs $(pwd)/shell/.zshrc ~/.zshrc
 ln -fs $(pwd)/shell/.p10k.zsh ~/.p10k.zsh
 ln -fs $(pwd)/shell/.tmux.conf ~/.tmux.conf
-ln -fs $(pwd)/shell/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -fs $(pwd)/shell/kitty.conf ~/.config/kitty/kitty.conf
 cp -rsf $(pwd)/nvim/ ~/.config/

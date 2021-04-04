@@ -5,7 +5,7 @@ Instructions are for Arch-based distributions.
 #### Screenshot
 
 ![Neovim](https://github.com/davidkariuki/dotfiles/raw/main/screenshots/nvim.png "Neovim")
-![Alacritty](https://github.com/davidkariuki/dotfiles/raw/main/screenshots/terminal.png "Alacritty")
+![Kitty](https://github.com/davidkariuki/dotfiles/raw/main/screenshots/terminal.png "Kitty")
 
 ### Fonts
 
@@ -16,7 +16,7 @@ Install the fonts in ./font
 ### Base
 
 ```zsh
-sudo pacman -S --needed zsh tmux bat neofetch alacritty lazygit github-cli npm
+sudo pacman -S --needed zsh tmux bat neofetch kitty lazygit github-cli npm
 yay -S --needed neovim-nightly-bin bottom rbenv ruby-build rg
 ```
 
@@ -29,8 +29,6 @@ gh auth login
 ## Config dirs
 
 ```zsh
-mkdir -p ~/.config/nvim
-mkdir -p ~/.config/alacritty/alacritty
 mkdir -p ~/.tmux/plugins
 mkdir ~/.npm-global
 mkdir ~/.yarn-global
