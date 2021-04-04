@@ -30,9 +30,7 @@ return require("packer").startup(function(use)
   use { "glepnir/lspsaga.nvim" }
 
   -- Git
-  use { "tpope/vim-fugitive" }
-  use { "tpope/vim-dispatch" }
-  use { "airblade/vim-gitgutter" }
+  use { "lewis6991/gitsigns.nvim" }
 
   -- Drawer
   use {
