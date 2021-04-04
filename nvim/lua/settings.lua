@@ -31,6 +31,7 @@ vim.cmd "au TextYankPost * lua vim.highlight.on_yank {on_visual = false}"
 
 -- Formatoptions
 vim.cmd "au BufEnter * set fo-=c fo-=r fo-=o"
+vim.cmd "autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync(nil, 1000)"
 
 -- colorscheme
 vim.o.termguicolors = true
