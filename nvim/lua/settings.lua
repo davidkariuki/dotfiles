@@ -28,6 +28,7 @@ vim.wo.signcolumn = "yes"
 
 -- Highlight on yank
 vim.cmd "au TextYankPost * lua vim.highlight.on_yank {on_visual = false}"
+vim.cmd "autocmd InsertLeave * set nopaste"
 
 -- Formatoptions
 vim.cmd "au BufEnter * set fo-=c fo-=r fo-=o"
