@@ -16,8 +16,8 @@ Install the fonts in ./font
 ### Base
 
 ```zsh
-sudo pacman -S --needed zsh tmux bat neofetch kitty lazygit github-cli npm
-yay -S --needed neovim-nightly-bin bottom rbenv ruby-build rg
+sudo pacman -S --needed zsh tmux bat neofetch kitty lazygit github-cli npm go
+yay -S --needed neovim-nightly-bin bottom-bin rbenv ruby-build ripgrep
 ```
 
 ### Github CLI
