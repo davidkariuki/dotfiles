@@ -76,6 +76,10 @@ local function setup_servers()
       config.settings = lua_settings
     end
 
+    if server == "efm" then
+      config = vim.tbl_extend("force", config, require "config.lsp.efm")
+    end
+
     require"lspconfig"[server].setup(config)
   end
 end
