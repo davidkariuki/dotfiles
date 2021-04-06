@@ -25,28 +25,6 @@ local on_attach = function(client, bufnr)
   end
 end
 
--- Configure lua language server for neovim development
-local lua_settings = {
-  Lua = {
-    runtime = {
-      -- LuaJIT in the case of Neovim
-      version = "LuaJIT",
-      path = vim.split(package.path, ";"),
-    },
-    diagnostics = {
-      -- Get the language server to recognize the `vim` global
-      globals = {"vim"},
-    },
-    workspace = {
-      -- Make the server aware of Neovim runtime files
-      library = {
-        [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-        [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
-      },
-    },
-  }
-}
-
 -- config that activates keymaps and enables snippet support
 local function make_config()
   local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -73,7 +51,7 @@ local function setup_servers()
 
     -- language specific config
     if server == "lua" then
-      config.settings = lua_settings
+      config = vim.tbl_extend("force", config, require "config.lsp.lua")
     end
 
     if server == "efm" then
