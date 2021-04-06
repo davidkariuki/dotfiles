@@ -1,11 +1,15 @@
 local prettier = {
-  formatCommand = "prettier",
+  formatCommand = "prettier --stdin-filepath ${INPUT}",
+  formatStdin = true
 }
 
 local eslint = {
-  lintCommand = 'eslint_d -f unix --stdin',
-  lintIgnoreExitCode = true,
+  lintCommand = "eslint_d -f unix --stdin --stdin-filename ${INPUT}",
   lintStdin = true,
+  lintFormats = {"%f:%l:%c: %m"},
+  lintIgnoreExitCode = true,
+  formatCommand = "eslint_d --fix-to-stdout --stdin --stdin-filename=${INPUT}",
+  formatStdin = true
 }
 
 local shellcheck = {
@@ -18,34 +22,35 @@ local shellcheck = {
   },
 }
 
-local shfmt = {
-  formatCommand = 'shfmt -ci -s -bn',
-  formatStdin = true,
-}
-
 local luaformat = {
   formatCommand = "lua-format -i",
   formatStdin = true
 }
 
+local languages = {
+  -- python = {isort, black},
+  sh = {shellcheck},
+  lua = {luaformat},
+  vue = {prettier, eslint},
+  typescript = {prettier, eslint},
+  javascript = {prettier, eslint},
+  typescriptreact = {prettier, eslint},
+  javascriptreact = {prettier, eslint},
+  yaml = {prettier},
+  json = {prettier},
+  html = {prettier},
+  scss = {prettier},
+  css = {prettier},
+  markdown = {prettier}
+}
+
 return {
-  filetypes = {
-    "sh",
-    "lua",
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  },
+  filetypes = vim.tbl_keys(languages),
   init_options = {
     documentFormatting = true
   },
   settings = {
-    rootMarkers = { ".git/" },
-    languages = {
-      lua = { luaformat },
-      sh = { shellcheck, shfmt },
-      javascript = { eslint, prettier },
-    },
+    rootMarkers = { ".git/", "package.json", "yarn.lock", "Dockerfile", "README.md" },
+    languages = languages,
   }
 }

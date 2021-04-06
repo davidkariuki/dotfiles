@@ -1,4 +1,3 @@
--- Configure lua language server for neovim development
 return {
   settings = {
     Lua = {
