@@ -58,6 +58,10 @@ local function setup_servers()
       config = vim.tbl_extend("force", config, require "config.lsp.efm")
     end
 
+    if server == "ruby" then
+      config = vim.tbl_extend("force", config, require "config.lsp.solargraph")
+    end
+
     require"lspconfig"[server].setup(config)
   end
 end
