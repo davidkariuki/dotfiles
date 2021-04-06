@@ -17,7 +17,7 @@ Install the fonts in ./font
 
 ```zsh
 sudo pacman -S --needed zsh tmux bat neofetch kitty lazygit github-cli npm go
-yay -S --needed neovim-nightly-bin bottom-bin rbenv ruby-build ripgrep
+yay -S --needed neovim-nightly-bin bottom-bin rbenv ruby-build ripgrep shellcheck direnv
 ```
 
 ### Github CLI
@@ -89,7 +89,7 @@ yarn config set prefix '~/.yarn-global'
 #### yarn binaries
 
 ```zsh
-yarn global add typescript prettier n
+yarn global add typescript prettier eslint_d n
 ```
 
 #### node
