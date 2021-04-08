@@ -38,7 +38,6 @@ vim.cmd "au BufEnter * set fo-=c fo-=r fo-=o"
 vim.o.termguicolors = true
 vim.o.background = "dark"
 vim.cmd "colorscheme one"
--- vim.cmd "colorscheme onebuddy"
 
 -- completion
 vim.o.completeopt =  "menu,menuone,noinsert,noselect"

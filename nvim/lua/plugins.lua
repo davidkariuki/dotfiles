@@ -4,11 +4,6 @@ return require("packer").startup(function(use)
 
   -- Syntax / Linting
   use { "rakr/vim-one" }
-  use {
-    "Th3Whit3Wolf/onebuddy",
-    requires = {{ "tjdevries/colorbuddy.vim" }}
-  }
-  -- use { "hoob3rt/lualine.nvim" }
   use { "glepnir/galaxyline.nvim" }
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use { "p00f/nvim-ts-rainbow" }
