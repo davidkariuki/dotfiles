@@ -116,6 +116,7 @@ export BAT_THEME="TwoDark"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cat="bat"
 alias vim="nvim"
+alias lg="lazygit"
 
 YARN_GLOBAL="${HOME}/.yarn-global"
 NPM_GLOBAL="${HOME}/.npm-global"
