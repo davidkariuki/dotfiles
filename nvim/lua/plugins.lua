@@ -29,7 +29,8 @@ return require("packer").startup(function(use)
   use { "kabouzeid/nvim-lspinstall" }
   use { "hrsh7th/nvim-compe" }
   use { "onsails/lspkind-nvim" }
-  use { "glepnir/lspsaga.nvim" }
+  -- use { "glepnir/lspsaga.nvim" }
+  use { "ckipp01/lspsaga.nvim", branch = "trimUpdate" }
 
   -- Git
   use { "lewis6991/gitsigns.nvim" }
