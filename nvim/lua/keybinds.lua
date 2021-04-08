@@ -22,5 +22,6 @@ vim.api.nvim_set_keymap("n", "gr", "<cmd>Lspsaga rename<CR>", { noremap = true, 
 vim.api.nvim_set_keymap("n", "<A-g>", "<cmd>Lspsaga open_floaterm lazygit<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<A-t>", "<cmd>Lspsaga open_floaterm<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<A-t>", "<C-\\><C-n><cmd>Lspsaga close_floaterm<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<A-g>", "<C-\\><C-n><cmd>Lspsaga close_floaterm<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-f>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-b>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", { noremap = true, silent = true })
