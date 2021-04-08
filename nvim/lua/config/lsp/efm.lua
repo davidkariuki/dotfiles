@@ -22,15 +22,9 @@ local shellcheck = {
   },
 }
 
-local luaformat = {
-  formatCommand = "lua-format -i",
-  formatStdin = true
-}
-
 local languages = {
   -- python = {isort, black},
   sh = {shellcheck},
-  lua = {luaformat},
   vue = {prettier, eslint},
   typescript = {prettier, eslint},
   javascript = {prettier, eslint},
