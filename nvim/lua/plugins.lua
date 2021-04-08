@@ -42,5 +42,8 @@ return require("packer").startup(function(use)
   -- Navigation
   use { "phaazon/hop.nvim" }
   use { "christoomey/vim-tmux-navigator" }
+
+  -- Terminal
+  use { "voldikss/vim-floaterm" }
 end)
 
