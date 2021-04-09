@@ -3,6 +3,7 @@ local indent = 2
 vim.cmd "syntax enable"
 vim.cmd "filetype plugin indent on"
 
+vim.o.undofile = true
 vim.o.tabstop = indent
 vim.o.softtabstop = indent
 vim.o.shiftwidth = indent
