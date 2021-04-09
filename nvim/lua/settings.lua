@@ -32,6 +32,9 @@ vim.wo.signcolumn = "yes"
 vim.cmd "au TextYankPost * lua vim.highlight.on_yank {on_visual = false}"
 vim.cmd "autocmd InsertLeave * set nopaste"
 
+-- MDX support
+vim.cmd "autocmd BufNewFile,BufRead *.mdx set syntax=markdown.mdx"
+
 -- Formatoptions
 vim.cmd "au BufEnter * set fo-=c fo-=r fo-=o"
 

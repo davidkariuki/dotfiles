@@ -15,6 +15,7 @@ return require("packer").startup(function(use)
   use { "mattn/emmet-vim" }
   use { "tpope/vim-surround" }
   use { "karb94/neoscroll.nvim" }
+  use { "iamcco/markdown-preview.nvim", run = "cd app && yarn install" }
 
   -- Fuzzy finder
   use {

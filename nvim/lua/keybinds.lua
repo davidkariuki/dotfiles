@@ -13,6 +13,7 @@ map("n", "<Leader>d", "<cmd>pu=strftime('%b %d, %Y %X')<CR>", { noremap = true }
 map("n", "<Leader>f", "<cmd>NvimTreeFindFile<cr>", { noremap = true })
 map("n", "<Leader>n", "<cmd>NvimTreeToggle<cr>", { noremap = true })
 map("n", "<Leader>a", "<cmd>Lspsaga code_action<CR>", { noremap = true })
+map("n", "<Leader>p", "<cmd>MarkdownPreview<CR>", { noremap = true })
 map("n", "K", "<cmd>Lspsaga hover_doc<CR>", { noremap = true, silent = true })
 map("n", "C-k", "<cmd>Lspsaga signature_help<CR>", { noremap = true, silent = true })
 map("n", "gd", "<cmd>lua require'lspsaga.provider'.preview_definition()<CR>", { noremap = true, silent = true })
