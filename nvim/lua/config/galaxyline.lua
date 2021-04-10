@@ -45,7 +45,7 @@ gls.left[2] = {
 
 gls.left[3] = {
   FileName = {
-    provider = {"FileName", "FileSize"},
+    provider = {"FileName"},
     condition = cond.buffer_not_empty,
     highlight = {colors.fg, colors.lightbg}
   }
@@ -59,18 +59,9 @@ gls.left[4] = {
   }
 }
 
-local checkwidth = function()
-  local squeeze_width = vim.fn.winwidth(0) / 2
-  if squeeze_width > 40 then
-    return true
-  end
-  return false
-end
-
 gls.left[5] = {
   DiffAdd = {
     provider = "DiffAdd",
-    condition = checkwidth,
     icon = "  ",
     highlight = {colors.green, colors.line_bg}
   }
@@ -79,7 +70,6 @@ gls.left[5] = {
 gls.left[6] = {
   DiffModified = {
     provider = "DiffModified",
-    condition = checkwidth,
     icon = "  ",
     highlight = {colors.darkblue, colors.line_bg}
   }
@@ -88,7 +78,6 @@ gls.left[6] = {
 gls.left[7] = {
   DiffRemove = {
     provider = "DiffRemove",
-    condition = checkwidth,
     icon = "  ",
     highlight = {colors.red, colors.line_bg}
   }

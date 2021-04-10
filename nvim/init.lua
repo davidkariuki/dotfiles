@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-
 local fn = vim.fn
 local execute = vim.api.nvim_command
 
@@ -14,14 +12,14 @@ vim.cmd [[packadd packer.nvim]]
 -- Auto-compile plugin changes
 vim.cmd "autocmd BufWritePost plugins.lua PackerCompile"
 
--- Install plugins
+-- Installed plugins
 require("plugins")
-
--- Keybinds
-require("keybinds")
 
 -- General settings
 require("settings")
+
+-- Keybinds
+require("keybinds")
 
 -- Plugin Config
 require("config")
