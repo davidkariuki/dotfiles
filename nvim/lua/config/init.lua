@@ -1,4 +1,5 @@
 require("config.compe")
+require("config.emmet")
 require("config.floaterm")
 require("config.galaxyline")
 require("config.gitsigns")
