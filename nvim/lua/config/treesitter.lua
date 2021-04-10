@@ -1,7 +1,6 @@
 require"nvim-treesitter.configs".setup
 {
-  ensure_installed = {"css", "html", "json", "toml", "ruby", "python", "typescript", "javascript", "svelte", "lua"},
-  ignore_install = {},
+  ensure_installed = {"css", "html", "json", "toml", "ruby", "rust", "python", "typescript", "javascript", "svelte", "tsx", "lua", "regex"},
   highlight = {
     enable = true,
   },
