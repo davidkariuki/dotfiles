@@ -39,12 +39,13 @@ vim.cmd "autocmd BufNewFile,BufRead *.mdx set syntax=markdown.mdx"
 -- Formatoptions
 vim.cmd "au BufEnter * set fo-=c fo-=r fo-=o"
 
--- colorscheme
+-- Colors
+vim.g.darkbuddy_italics = true
 vim.o.termguicolors = true
 vim.o.background = "dark"
-vim.cmd "colorscheme one"
+vim.cmd "colorscheme darkbuddy"
 
--- completion
+-- Completion
 vim.o.completeopt =  "menu,menuone,noinsert,noselect"
 vim.cmd "set shortmess+=c"
 vim.g.completion_confirm_key = ""
