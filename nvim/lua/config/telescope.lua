@@ -1,8 +1,15 @@
--- local actions = require('telescope.actions')
+local actions = require("telescope.actions")
 
 require("telescope").setup {
   defaults = {
-    prompt_position = "top",
+    mappings = {
+      i = {
+        ["<esc>"] = actions.close
+      },
+      n = {
+        ["q"] = actions.close
+      }
+    },
     prompt_prefix = " 🔎 ",
     generic_sorter =  require"telescope.sorters".get_fzy_sorter,
     file_sorter =  require"telescope.sorters".get_fzy_sorter,
@@ -15,7 +22,7 @@ require("telescope").setup {
         preview_width = 0.6
       },
       vertical = {
-        mirrot = false
+        mirror = false
       }
     }
   }
