@@ -63,4 +63,4 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 
 -- Filetypes
 vim.cmd "au BufRead,BufNewFile *.mdx setfiletype markdown.mdx"
-vim.cmd "au BufRead,BufNewFile *.conf setfiletype zsh"
+vim.cmd "au BufRead,BufNewFile *.conf,*.env* setfiletype zsh"
