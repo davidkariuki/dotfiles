@@ -9,15 +9,15 @@ Instructions are for Arch-based distributions.
 
 ### Fonts
 
-Install the fonts in ./font
+Install the fonts in `./fonts` (or install via the AUR with the binaries below)
 
 ## Binaries
 
 ### Base
 
 ```zsh
-sudo pacman -S --needed zsh tmux bat neofetch kitty lazygit github-cli npm go
-yay -S --needed neovim-nightly-bin bottom-bin rbenv ruby-build ripgrep shellcheck direnv
+yay -S --needed ttf-fira-code zsh tmux bat neofetch kitty lazygit github-cli \
+npm go neovim-nightly-bin bottom-bin rbenv ruby-build ripgrep shellcheck direnv
 ```
 
 ### Github CLI
