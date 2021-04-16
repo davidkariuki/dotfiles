@@ -117,6 +117,7 @@ export BAT_THEME="TwoDark"
 alias cat="bat"
 alias vim="nvim"
 alias lg="lazygit"
+alias tm="tmuxinator"
 
 YARN_GLOBAL="${HOME}/.yarn-global"
 NPM_GLOBAL="${HOME}/.npm-global"
