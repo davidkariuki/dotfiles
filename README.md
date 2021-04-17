@@ -15,9 +15,17 @@ Install the fonts in `./fonts` (or install via the AUR with the binaries below)
 
 ### Base
 
+First enable the AUR
+
 ```zsh
+sudo pacman -S --needed base-devel yay
 yay -S --needed ttf-fira-code zsh tmux bat neofetch kitty lazygit github-cli \
 npm go neovim-nightly-bin bottom-bin rbenv ruby-build ripgrep shellcheck direnv
+```
+#### oh-my-zsh
+
+```zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ### Github CLI
@@ -32,6 +40,7 @@ gh auth login
 mkdir -p ~/.tmux/plugins
 mkdir ~/.npm-global
 mkdir ~/.yarn-global
+mkdir -p ~/.config/tmuxinator
 ```
 
 #### Dotfile symlinks
@@ -40,14 +49,10 @@ mkdir ~/.yarn-global
 gh repo clone davidkariuki/dotfiles
 cd dotfiles && ./install.sh
 ```
+Log out to pick up the symlinked config
 
 ## Plugin setup
 
-#### oh-my-zsh
-
-```zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
 
 #### zsh-autosuggestions
 
@@ -64,14 +69,13 @@ gh repo clone zdharma/fast-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom
 #### powerlevel10k
 
 ```zsh
-git clone --depth=1 romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
-
-Reboot to pick up the Zsh config
 
 #### Tmux plugins
 
 ```zsh
+gem install tmuxinator
 gh repo clone tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
