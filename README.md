@@ -37,10 +37,7 @@ gh auth login
 ## Config dirs
 
 ```zsh
-mkdir -p ~/.tmux/plugins
-mkdir ~/.npm-global
-mkdir ~/.yarn-global
-mkdir -p ~/.config/tmuxinator
+mkdir -p ~/.tmux/plugins ~/.npm-global ~/.yarn-global ~/.config/tmuxinator
 ```
 
 #### Dotfile symlinks
