@@ -30,6 +30,7 @@ local languages = {
   javascript = {prettier, eslint},
   typescriptreact = {prettier, eslint},
   javascriptreact = {prettier, eslint},
+  svelte = {eslint},
   yaml = {prettier},
   json = {prettier},
   html = {prettier},
