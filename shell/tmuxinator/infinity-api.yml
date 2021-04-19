@@ -4,7 +4,8 @@ root: ~/projects/infinity/platform-api
 windows:
   - editor: nvim
   - server:
-      layout: even-horizontal
+      layout: tiled
       panes:
         - docker-compose up
         - hivemind
+        -
