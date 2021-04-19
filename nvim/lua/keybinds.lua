@@ -30,3 +30,6 @@ map("n", "<A-g>", "<cmd>FloatermNew lazygit<CR>", { noremap = true, silent = tru
 map("t", "<A-g>", "<C-\\><C-n><cmd>FloatermKill<CR>", { noremap = true, silent = true })
 map("n", "<C-_>", "<Plug>NERDCommenterToggle", {})
 map("v", "<C-_>", "<Plug>NERDCommenterToggle<CR>", {})
+map("v", "<Leader>y", "\"+y", { noremap = true })
+map("n", "<Leader>y", "\"+y", { noremap = true })
+map("n", "<Leader>Y", "\"+yg_", { noremap = true })
