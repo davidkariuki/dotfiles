@@ -23,7 +23,6 @@ local shellcheck = {
 }
 
 local languages = {
-  -- python = {isort, black},
   sh = {shellcheck},
   vue = {prettier, eslint},
   typescript = {prettier, eslint},
@@ -36,7 +35,7 @@ local languages = {
   html = {prettier},
   scss = {prettier},
   css = {prettier},
-  markdown = {prettier}
+  markdown = {prettier},
 }
 
 return {
@@ -47,5 +46,7 @@ return {
   settings = {
     rootMarkers = { ".git/", "package.json", "yarn.lock", "Dockerfile", "README.md" },
     languages = languages,
+    log_level = 1,
+    log_file = "~/efm.log",
   }
 }

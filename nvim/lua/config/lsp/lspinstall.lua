@@ -37,39 +37,36 @@ local function make_config()
   }
 end
 
--- lsp-install
-local function setup_servers()
-  require"lspinstall".setup()
+-- lsp_install configuration
+local lsp_install = require("lspinstall")
+local lsp_config = require("lspconfig")
 
-  -- get all installed servers
-  local servers = require"lspinstall".installed_servers()
-  -- ... and add manually installed servers
-  -- table.insert(servers, "clangd")
+local function setup_servers()
+  lsp_install.setup()
+  local servers = lsp_install.installed_servers()
 
   for _, server in pairs(servers) do
     local config = make_config()
 
     -- language specific config
-    if server == "lua" then
-      config = vim.tbl_extend("force", config, require "config.lsp.lua")
+    local lang_config = {
+      lua = true,
+      efm = true,
+      ruby = true
+    }
+
+    if lang_config[server] then
+      config = vim.tbl_extend("force", config, require("config.lsp.".. server))
     end
 
-    if server == "efm" then
-      config = vim.tbl_extend("force", config, require "config.lsp.efm")
-    end
-
-    if server == "ruby" then
-      config = vim.tbl_extend("force", config, require "config.lsp.solargraph")
-    end
-
-    require"lspconfig"[server].setup(config)
+    lsp_config[server].setup(config)
   end
 end
 
 setup_servers()
 
 -- Automatically reload after `:LspInstall <server>` so we don"t have to restart neovim
-require"lspinstall".post_install_hook = function ()
+lsp_install.post_install_hook = function ()
   setup_servers() -- reload installed servers
   vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
 end
