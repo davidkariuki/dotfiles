@@ -20,7 +20,6 @@ saga.init_lsp_saga {
   definition_preview_icon = "  ",
   finder_definition_icon = "  ",
   finder_reference_icon = "  ",
-  max_preview_lines = 10,
   finder_action_keys = {
     open = "o",
     vsplit = "v",
@@ -29,10 +28,7 @@ saga.init_lsp_saga {
     scroll_down = "<C-j>",
     scroll_up = "<C-k>"
   },
-  border_style = 1,
-  rename_prompt_prefix = "➤",
 }
 
 vim.cmd "autocmd CursorHold  * :Lspsaga show_line_diagnostics"
-vim.cmd "highlight default LspSagaDiagnosticBorder guifg=#abb2bf guibg=NONE "
-vim.cmd "highlight default LspSagaDiagnosticTruncateLine guifg=#abb2bf guibg=NONE "
+vim.cmd "hi! link NormalFloat Normal"
