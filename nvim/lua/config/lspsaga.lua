@@ -28,6 +28,7 @@ saga.init_lsp_saga {
     scroll_down = "<C-j>",
     scroll_up = "<C-k>"
   },
+  border_style = "round"
 }
 
 vim.cmd "autocmd CursorHold  * :Lspsaga show_line_diagnostics"
