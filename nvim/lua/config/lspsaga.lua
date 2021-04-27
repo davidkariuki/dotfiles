@@ -32,4 +32,3 @@ saga.init_lsp_saga {
 }
 
 vim.cmd "autocmd CursorHold  * :Lspsaga show_line_diagnostics"
-vim.cmd "hi! link NormalFloat Normal"
