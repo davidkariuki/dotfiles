@@ -15,13 +15,14 @@ Install the fonts in `./fonts` (or install via the AUR with the binaries below)
 
 ### Base
 
-First enable the AUR
+Enable the AUR first
 
 ```zsh
 sudo pacman -S --needed base-devel yay
 yay -S --needed ttf-fira-code zsh tmux bat neofetch kitty lazygit github-cli \
 npm go neovim-nightly-bin bottom-bin rbenv ruby-build ripgrep shellcheck direnv
 ```
+
 #### oh-my-zsh
 
 ```zsh
@@ -46,10 +47,10 @@ mkdir -p ~/.tmux/plugins ~/.npm-global ~/.yarn-global ~/.config/tmuxinator
 gh repo clone davidkariuki/dotfiles
 cd dotfiles && ./install.sh
 ```
+
 Log out to pick up the symlinked config
 
 ## Plugin setup
-
 
 #### zsh-autosuggestions
 
