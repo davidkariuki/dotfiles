@@ -16,9 +16,9 @@ local shellcheck = {
   lintCommand = 'shellcheck -f gcc -x',
   lintSource = "shellcheck",
   lintFormats = {
-    '%f:%l:%c: %trror: %m',
-    '%f:%l:%c: %tarning: %m',
-    '%f:%l:%c: %tote: %m'
+    '%f:%l:%c: %error: %m',
+    '%f:%l:%c: %warning: %m',
+    '%f:%l:%c: %note: %m'
   },
 }
 
