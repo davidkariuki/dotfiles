@@ -52,7 +52,8 @@ local function setup_servers()
     local lang_config = {
       lua = true,
       efm = true,
-      ruby = true
+      ruby = true,
+      svelte = true
     }
 
     if lang_config[server] then
