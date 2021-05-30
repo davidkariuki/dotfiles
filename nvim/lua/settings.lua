@@ -23,11 +23,11 @@ vim.o.wildmode = "list:longest"
 vim.o.pastetoggle = "<Leader>p"
 vim.o.equalalways = true
 vim.o.ch = 1
-vim.wo.number = true
-vim.wo.cursorline = true
-vim.wo.relativenumber = true
-vim.wo.wrap = false
-vim.wo.signcolumn = "yes"
+vim.o.number = true
+vim.o.cursorline = true
+vim.o.relativenumber = true
+vim.o.wrap = false
+vim.o.signcolumn = "yes"
 
 -- Highlight on yank
 vim.cmd "au TextYankPost * lua vim.highlight.on_yank {on_visual = false}"
