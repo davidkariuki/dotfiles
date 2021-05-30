@@ -1,0 +1,10 @@
+name: infinity-mobile
+root: ~/projects/infinity/mobile
+
+windows:
+  - editor: nvim
+  - server:
+      layout: even-horizontal
+      panes:
+        - yarn start
+        -
