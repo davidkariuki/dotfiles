@@ -7,10 +7,6 @@ Instructions are for Arch-based distributions.
 ![Neovim](https://github.com/davidkariuki/dotfiles/raw/main/screenshots/nvim.png "Neovim")
 ![Kitty](https://github.com/davidkariuki/dotfiles/raw/main/screenshots/terminal.png "Kitty")
 
-### Fonts
-
-Install the fonts in `./fonts` (or install via the AUR with the binaries below)
-
 ## Binaries
 
 ### Base
