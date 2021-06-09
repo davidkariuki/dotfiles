@@ -3,7 +3,7 @@ return require("packer").startup(function(use)
   use { "wbthomason/packer.nvim", opt = true }
 
   -- Syntax / Linting
-  use { "davidkariuki/darkbuddy", requires = {{ "tjdevries/colorbuddy.vim" }} }
+  use { "davidkariuki/darkbuddy", requires = "tjdevries/colorbuddy.vim" }
   use { "glepnir/galaxyline.nvim" }
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use { "p00f/nvim-ts-rainbow" }
@@ -34,7 +34,7 @@ return require("packer").startup(function(use)
   use { "lewis6991/gitsigns.nvim" }
 
   -- Drawer
-  use { "kyazdani42/nvim-tree.lua", requires = {{ "kyazdani42/nvim-web-devicons" }} }
+  use { "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" }
 
   -- Navigation
   use { "phaazon/hop.nvim" }
