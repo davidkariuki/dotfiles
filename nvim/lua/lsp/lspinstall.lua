@@ -60,7 +60,7 @@ local function setup_servers()
     }
 
     if lang_config[server] then
-      config = vim.tbl_extend("force", config, require("config.lsp.".. server))
+      config = vim.tbl_extend("force", config, require("lsp.".. server))
     end
 
     lsp_config[server].setup(config)

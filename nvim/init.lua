@@ -21,5 +21,5 @@ require("settings")
 -- Keybinds
 require("keybinds")
 
--- Plugin Config
-require("config")
+-- LSP Config
+require("lsp")
