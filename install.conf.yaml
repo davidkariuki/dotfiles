@@ -6,7 +6,6 @@
 - clean: ["~"]
 
 - link:
-    ~/projects/dotfiles: ""
     ~/.tmux.conf: shell/.tmux.conf
     ~/.p10k.zsh: shell/.p10k.zsh
     ~/.zshrc: shell/.zshrc
