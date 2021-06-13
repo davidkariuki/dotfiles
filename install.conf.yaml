@@ -1,0 +1,20 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ["~"]
+
+- link:
+    ~/projects/dotfiles: ""
+    ~/.tmux.conf: shell/.tmux.conf
+    ~/.p10k.zsh: shell/.p10k.zsh
+    ~/.zshrc: shell/.zshrc
+    ~/.gitconfig: shell/.gitconfig
+    ~/.config/nvim: .config/nvim
+    ~/.config/kitty:
+      force: true
+      path: .config/kitty
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
