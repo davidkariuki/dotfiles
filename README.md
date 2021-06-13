@@ -11,12 +11,13 @@ Instructions are for Arch-based distributions.
 
 ### Base
 
-Enable the AUR first
-
 ```zsh
 sudo pacman -S --needed base-devel yay
+```
+
+```zsh
 yay -S --needed ttf-fira-code zsh tmux bat neofetch kitty lazygit github-cli \
-npm go neovim-nightly-bin bottom-bin rbenv ruby-build ripgrep shellcheck direnv
+npm go neovim-nightly-bin bottom-bin rbenv ruby-build ripgrep shellcheck direnv slack-desktop discord
 ```
 
 #### oh-my-zsh
@@ -34,14 +35,17 @@ gh auth login
 ## Config dirs
 
 ```zsh
-mkdir -p ~/.tmux/plugins ~/.npm-global ~/.yarn-global ~/.config/tmuxinator
+mkdir -p ~/projects ~/.tmux/plugins ~/.npm-global ~/.yarn-global ~/.config/tmuxinator
 ```
 
 #### Dotfile symlinks
 
 ```zsh
-gh repo clone davidkariuki/dotfiles
-cd dotfiles && ./install.sh
+gh repo clone davidkariuki/dotfiles ~/projects/dotfiles
+```
+
+```zsh
+cd ~/projects/dotfiles && ./install.sh
 ```
 
 Log out to pick up the symlinked config
@@ -66,10 +70,23 @@ gh repo clone zdharma/fast-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
+#### Ruby
+
+```zsh
+rbenv install 3.0.1
+```
+
+```zsh
+rbenv global 3.0.1
+```
+
 #### Tmux plugins
 
 ```zsh
 gem install tmuxinator
+```
+
+```zsh
 gh repo clone tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
@@ -79,8 +96,13 @@ Start a new tmux session and run `C-a I`
 
 ```zsh
 npm config set prefix '~/.npm-global'
+```
 
+```zsh
 npm i -g yarn
+```
+
+```zsh
 yarn config set prefix '~/.yarn-global'
 ```
 
