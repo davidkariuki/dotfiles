@@ -4,7 +4,6 @@ return require("packer").startup(function(use)
 
   -- Syntax / Linting
   use { "davidkariuki/darkbuddy", requires = "tjdevries/colorbuddy.vim" }
-  use { "glepnir/galaxyline.nvim" }
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use { "p00f/nvim-ts-rainbow" }
   use { "RRethy/vim-hexokinase", run = "make hexokinase"}
@@ -35,6 +34,12 @@ return require("packer").startup(function(use)
 
   -- Drawer
   use { "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" }
+
+  --- Statusline
+  use {
+    "hoob3rt/lualine.nvim",
+    requires = { "kyazdani42/nvim-web-devicons", opt = true }
+  }
 
   -- Navigation
   use { "phaazon/hop.nvim" }
