@@ -2,6 +2,7 @@
     link:
       create: true
       relink: true
+      force: true
 
 - clean: ["~"]
 
@@ -11,9 +12,8 @@
     ~/.zshrc: shell/.zshrc
     ~/.gitconfig: shell/.gitconfig
     ~/.config/nvim: .config/nvim
-    ~/.config/kitty:
-      force: true
-      path: .config/kitty
+    ~/.config/tmuxinator: .config/tmuxinator
+    ~/.config/kitty: .config/kitty
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
