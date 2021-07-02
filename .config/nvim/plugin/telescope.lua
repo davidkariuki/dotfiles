@@ -16,7 +16,7 @@ require("telescope").setup {
     layout_strategy = "flex",
     shorten_path = true,
     use_less = true,
-    layout_defaults = {
+    layout_config = {
       horizontal = {
         mirror = false,
         preview_width = 0.6
