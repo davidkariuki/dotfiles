@@ -13,11 +13,6 @@ require"compe".setup {
   max_menu_width = 100;
   documentation = {
     border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-    winhighlight = "NormalFloat:CompeDocumentation,FloatBorder:CompeDocumentationBorder",
-    max_width = 120,
-    min_width = 60,
-    max_height = math.floor(vim.o.lines * 0.3),
-    min_height = 1,
   };
 
   source = {
@@ -31,3 +26,4 @@ require"compe".setup {
     luasnip = true;
   };
 }
+
