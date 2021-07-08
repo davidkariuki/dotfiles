@@ -14,7 +14,7 @@ require("telescope").setup {
     generic_sorter =  require"telescope.sorters".get_fzy_sorter,
     file_sorter =  require"telescope.sorters".get_fzy_sorter,
     layout_strategy = "flex",
-    shorten_path = true,
+    path_display = { "shorten" },
     use_less = true,
     layout_config = {
       horizontal = {
