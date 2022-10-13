@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+echo "Installing applications..."
+sudo pacman -S --needed --noconfirm base-devel git python
+
+if [ -z $(which yay) ]; then
+	mkdir -p ~/Downloads
+	cd ~/Downloads && git clone https://aur.archlinux.org/yay.git
+	cd yay && makepkg -si
+fi
+
+yay -S --needed zsh \
+	tmux bat neofetch kitty lazygit stylua go neovim-nightly-bin btop rbenv ruby-build ripgrep shellcheck nordvpn-bin \
+	slack-desktop discord mono cmake github-cli tree xclip brightnessctl feh bluez bluez-utils rofi picom nerd-fonts-complete \
+	noto-fonts betterlockscreen-git dunst jq xfce4-power-manager ranger polybar unzip i3-scrot man lxappearance web-greeter \
+	spotify pulseaudio-ctl pavucontrol pulseaudio-bluetooth xss-lock pacman-contrib
+
+echo "Enabling services..."
+sudo systemctl enable nordvpnd.service --now
+sudo systemctl enable bluetooth.service --now
+sudo systemctl enable betterlockscreen@$USER --now
+sudo usermod -aG nordvpn $USER

@@ -1,0 +1,35 @@
+[colors]
+ansi = [
+    "#000000",
+    "#e06c75",
+    "#98c379",
+    "#d19a66",
+    "#61afef",
+    "#c678dd",
+    "#56b6c2",
+    "#abb2bf",
+]
+background = "#1f2329"
+brights = [
+    "#5c6370",
+    "#e06c75",
+    "#98c379",
+    "#d19a66",
+    "#61afef",
+    "#c678dd",
+    "#56b6c2",
+    "#fffefe",
+]
+cursor_bg = "#dc6f02"
+cursor_fg = "#fffefe"
+cursor_border = "#5c6370"
+foreground = "#979eab"
+selection_bg = "#5c6370"
+selection_fg = "#fffefe"
+
+[colors.indexed]
+
+[metadata]
+name = "darkbuddy"
+origin_url = "https://github.com/Gogh-Co/Gogh"
+# essentially Onedark Gogh with tiny edits

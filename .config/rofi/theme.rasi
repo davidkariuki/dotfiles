@@ -1,0 +1,90 @@
+* {
+  background-color: #1F2329;
+  selected-normal-background:  #dc6f02;
+  text-color: #979eab;
+  font: "MonoLisa 20";
+}
+
+window
+{
+  transparency: "real";
+  location: center;
+  x-offset: 0%;
+  y-offset: 0%;
+  height: 620px;
+  height: 620px;
+  width: 620px;
+  orientation: horizontal;
+  padding: 10px;
+  border: 0px;
+  width: 35%;
+  border: 2px;
+  border-radius: 5px;
+  border-color: #dc6f02;
+}
+
+inputbar
+{
+  border: 1 0 1px 0;
+  children: [prompt,entry];
+}
+
+prompt
+{
+  padding: 16px ;
+  border: 0 1px 0 0;
+  text-color: #dc6f02;
+  font: "MonoLisa 20";
+}
+
+entry
+{
+  padding: 16px;
+  text-color: #fabd2f;
+  font: "MonoLisa 20";
+}
+
+listview
+{
+  cycle: true;
+  padding: 16px;
+  scrollbar: false;
+  border-color: #dc6f02;
+}
+
+element
+{
+  border: 0;
+  padding: 8px;
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+}
+
+element-icon
+{
+  background-color: inherit;
+  size: 23px ;
+  margin: 0 10px 0 0;
+}
+
+element selected
+{
+  background-color:#fe8019;
+  text-color: #282828;
+  border: 0% 0% 0% 0%;
+  border-radius: 5px;
+  border-color: #fe8019;
+}
+
+element.selected.normal {
+  background-color: #689d6a;
+  text-color: #282828;
+}
+
+button.selected {
+  background-color: #dc6f02;
+  text-color:       #dc6f02;
+}

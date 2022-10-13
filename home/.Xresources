@@ -1,0 +1,9 @@
+Xft.dpi: 192
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.autohint:  false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+*.font: xft:Noto Sans:size=9.5,xft:MonoLisa:size=9.5,DejavuSansMono Nerd Font:size=9.5
+

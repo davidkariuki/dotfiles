@@ -1,0 +1,10 @@
+name: blog
+root: ~/projects/blog
+
+windows:
+  - editor: nvim
+  - server:
+      layout: even-horizontal
+      panes:
+        - yarn dev
+        -

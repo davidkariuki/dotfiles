@@ -1,0 +1,6 @@
+name: dotfiles
+root: ~/projects/dotfiles
+
+windows:
+  - editor: nvim
+  - console: lazygit

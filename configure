@@ -1,0 +1,53 @@
+#!/usr/bin/env zsh
+
+set -e
+
+echo "Starting Desktop Configuration..."
+sleep 2
+
+if ! [[ $SHELL == *"zsh"* ]]; then
+	chsh -s $(which zsh)
+fi
+
+echo "Setting up ZSH plugins..."
+sleep 2
+if [ ! -d ~/.oh-my-zsh ]; then
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+fi
+if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
+	git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+fi
+
+if [ ! -d ~/.oh-my-zsh/custom/plugins/F-Sy-H ]; then
+	git clone https://github.com/z-shell/F-Sy-H.git \
+		${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/F-Sy-H
+fi
+
+if [ ! -d ~/.oh-my-zsh/custom/themes/powerlevel10k ]; then
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+fi
+clear
+
+echo "Configuring pnpm..."
+sleep 2
+if [ ! -d ~/.local/share/pnpm ]; then
+	curl -fsSL https://get.pnpm.io/install.sh | sh -
+	source ~/.zshrc
+fi
+clear
+
+echo "Adding linters & formatters..."
+sleep 2
+pnpm i -g typescript prettier n vscode-langservers-extracted
+clear
+
+echo "Installing tmux plugins..."
+sleep 2
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+	mkdir -p ~/.tmux/plugins
+	git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
+fi
+clear
+
+sleep 2
+echo "Installation complete."
