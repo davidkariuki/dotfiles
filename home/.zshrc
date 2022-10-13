@@ -157,3 +157,4 @@ export GDK_DPI_SCALE=0.5
 export PNPM_HOME="/home/me/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+export PATH=$PATH:/home/me/.spicetify

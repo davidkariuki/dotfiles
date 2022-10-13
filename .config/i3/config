@@ -18,6 +18,10 @@ for_window [class="^.*"] border pixel 0
 for_window [urgent=latest] focus
 focus_on_window_activation focus
 
+# floating window sizes
+floating_minimum_size 150 x 100
+floating_maximum_size 800 x 600
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font MonoLisa 12
@@ -230,7 +234,7 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id setxkbmap -option ctrl:nocaps
 
 # Executables
-exec_always --no-startup-id feh --bg-fill --randomize ~/.config/wallpaper
+exec --no-startup-id feh --bg-fill --randomize ~/.config/wallpaper
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id xfce4-power-manager
