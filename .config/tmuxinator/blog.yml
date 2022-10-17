@@ -6,5 +6,5 @@ windows:
   - server:
       layout: even-horizontal
       panes:
-        - yarn dev
+        - pnpm dev
         -
