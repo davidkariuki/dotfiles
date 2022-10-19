@@ -49,5 +49,8 @@ if [ ! -d ~/.tmux/plugins/tpm ]; then
 fi
 clear
 
+echo "Configuring devices..."
+sudo cp 30-touchpad.conf /etc/x11/xorg.conf.d/
+
 sleep 2
 echo "Installation complete."
