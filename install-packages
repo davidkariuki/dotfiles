@@ -11,9 +11,9 @@ fi
 
 yay -S --needed zsh \
 	tmux bat neofetch kitty lazygit stylua go neovim-nightly-bin btop rbenv ruby-build ripgrep shellcheck nordvpn-bin \
-	slack-desktop discord mono cmake github-cli tree xclip brightnessctl feh bluez bluez-utils rofi picom nerd-fonts-complete \
+	slack-desktop discord mono cmake github-cli tree xclip brightnessctl feh bluez bluez-utils rofi picom \
 	noto-fonts betterlockscreen-git dunst jq xfce4-power-manager ranger polybar unzip i3-scrot man lxappearance web-greeter \
-	spotify spicetify-cli pulseaudio-bluetooth xss-lock pacman-contrib
+	spotify spicetify-cli pulseaudio-bluetooth xss-lock pacman-contrib nerd-fonts-fira-code noto-fonts-compat noto-fonts-cjk noto-fonts-emoji
 
 echo "Enabling services..."
 sudo systemctl enable nordvpnd.service --now
