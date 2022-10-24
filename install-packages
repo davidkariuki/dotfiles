@@ -11,7 +11,7 @@ fi
 
 yay -S --needed zsh \
 	tmux bat neofetch kitty lazygit stylua go neovim-nightly-bin btop rbenv ruby-build ripgrep shellcheck nordvpn-bin \
-	slack-desktop discord mono cmake github-cli tree xclip brightnessctl feh bluez bluez-utils rofi picom \
+	slack-desktop discord mono cmake github-cli tree xclip brightnessctl feh bluez bluez-utils rofi picom rofi-calc \
 	noto-fonts betterlockscreen-git dunst jq xfce4-power-manager ranger polybar unzip i3-scrot man lxappearance web-greeter \
 	spotify spicetify-cli pulseaudio-bluetooth xss-lock pacman-contrib nerd-fonts-fira-code noto-fonts-compat noto-fonts-cjk noto-fonts-emoji
 
