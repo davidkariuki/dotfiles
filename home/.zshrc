@@ -120,6 +120,7 @@ alias cat="bat"
 alias vim="nvim"
 alias lg="lazygit"
 alias tm="tmuxinator"
+alias ls="exa"
 
 LOCAL_PATH="${HOME}/.local"
 export PATH=$PATH:$LOCAL_PATH/bin

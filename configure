@@ -2,6 +2,12 @@
 
 set -e
 
+echo "Enabling services..."
+sudo systemctl enable nordvpnd.service --now
+sudo systemctl enable bluetooth.service --now
+sudo systemctl enable betterlockscreen@$USER --now
+sudo usermod -aG nordvpn $USER
+
 echo "Starting Desktop Configuration..."
 sleep 2
 
