@@ -233,7 +233,7 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id setxkbmap -option ctrl:nocaps
 
 # Executables
-exec --no-startup-id feh --bg-fill --randomize ~/.config/wallpaper
+exec --no-startup-id shuf -e -n1 ~/.config/wallpaper/* | xargs feh --bg-fill
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id xfce4-power-manager
