@@ -1,5 +1,4 @@
 require("plugin.floaterm")
-require("plugin.hexokinase")
 require("plugin.indentline")
 require("plugin.nerd-commenter")
 require("plugin.neo-tree")
