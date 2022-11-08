@@ -12,7 +12,7 @@
 set $mod Mod4
 
 # Hide window titlebars
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 
 # Focus active window
 for_window [urgent=latest] focus
