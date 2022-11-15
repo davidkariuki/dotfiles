@@ -18,6 +18,7 @@
     ~/.config/tmuxinator: .config/tmuxinator
     ~/.config/kitty: .config/kitty
     ~/.config/wezterm: .config/wezterm
+    ~/.config/starship.toml: .config/starship.toml
     ~/.config/i3/config: .config/i3/config
     ~/.config/polybar: .config/polybar
     ~/.config/rofi: .config/rofi

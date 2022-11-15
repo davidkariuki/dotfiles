@@ -28,10 +28,6 @@ if [ ! -d ~/.oh-my-zsh/custom/plugins/F-Sy-H ]; then
 	git clone https://github.com/z-shell/F-Sy-H.git \
 		${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/F-Sy-H
 fi
-
-if [ ! -d ~/.oh-my-zsh/custom/themes/powerlevel10k ]; then
-	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-fi
 clear
 
 echo "Configuring pnpm..."
