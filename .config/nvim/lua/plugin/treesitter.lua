@@ -14,6 +14,7 @@ require("nvim-treesitter.configs").setup({
     "lua",
     "regex",
     "c_sharp",
+    "markdown",
   },
   highlight = {
     enable = true,
