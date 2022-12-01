@@ -43,7 +43,15 @@ vim.cmd("au BufEnter * set fo-=c fo-=r fo-=o")
 -- Colors
 vim.o.termguicolors = true
 vim.o.background = "dark"
-vim.cmd("colorscheme darkbuddy")
+
+require("onedark").setup({
+  style = "darker",
+  colors = {
+    bg_d = "#1f2329",
+    bg1 = "#1f2329",
+  },
+})
+require("onedark").load()
 
 -- Completion
 vim.opt.completeopt = { "menu", "menuone", "noselect" }

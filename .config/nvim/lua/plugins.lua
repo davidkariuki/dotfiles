@@ -14,7 +14,7 @@ return require("packer").startup(function(use)
   use({ "wbthomason/packer.nvim" })
 
   -- Syntax / Linting
-  use({ "davidkariuki/darkbuddy", requires = { { "tjdevries/colorbuddy.vim" } } })
+  use({ "navarasu/onedark.nvim" })
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
   use({ "p00f/nvim-ts-rainbow" })
   use({ "NvChad/nvim-colorizer.lua" })
