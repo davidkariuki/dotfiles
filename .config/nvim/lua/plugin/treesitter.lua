@@ -1,4 +1,5 @@
 require("nvim-treesitter.configs").setup({
+  auto_install = true,
   ensure_installed = {
     "css",
     "html",
@@ -23,6 +24,9 @@ require("nvim-treesitter.configs").setup({
     enable = true,
   },
   rainbow = {
+    enable = true,
+  },
+  autotag = {
     enable = true,
   },
 })

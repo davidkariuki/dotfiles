@@ -34,6 +34,7 @@ return require("packer").startup(function(use)
       require("nvim-autopairs").setup({})
     end,
   })
+  use({ "windwp/nvim-ts-autotag" })
   use({ "rcarriga/nvim-notify" })
 
   -- Fuzzy finder
