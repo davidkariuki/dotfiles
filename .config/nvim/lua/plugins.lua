@@ -5,7 +5,7 @@ local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
   ---@diagnostic disable-next-line: lowercase-global
   packer_bootstrap =
-  fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+    fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
 end
 
 vim.cmd("packadd packer.nvim")
@@ -51,6 +51,7 @@ return require("packer").startup(function(use)
   })
   use({ "williamboman/mason.nvim" })
   use({ "williamboman/mason-lspconfig.nvim" })
+  use({ "jayp0521/mason-null-ls.nvim" })
   use({ "neovim/nvim-lspconfig" })
   use({ "hrsh7th/cmp-nvim-lua" })
   use({ "hrsh7th/cmp-nvim-lsp" })
@@ -62,6 +63,14 @@ return require("packer").startup(function(use)
   use({ "L3MON4D3/LuaSnip" })
   use({ "saadparwaiz1/cmp_luasnip" })
   use({ "rafamadriz/friendly-snippets" })
+  use({ "jose-elias-alvarez/typescript.nvim" })
+  use({
+    "kosayoda/nvim-lightbulb",
+    requires = "antoinemadec/FixCursorHold.nvim",
+    config = function()
+      require("nvim-lightbulb").setup({ autocmd = { enabled = true } })
+    end,
+  })
 
   -- Drawer
   use({
