@@ -65,13 +65,6 @@ return require("packer").startup(function(use)
   use({ "saadparwaiz1/cmp_luasnip" })
   use({ "rafamadriz/friendly-snippets" })
   use({ "jose-elias-alvarez/typescript.nvim" })
-  use({
-    "kosayoda/nvim-lightbulb",
-    requires = "antoinemadec/FixCursorHold.nvim",
-    config = function()
-      require("nvim-lightbulb").setup({ autocmd = { enabled = true } })
-    end,
-  })
 
   -- Drawer
   use({

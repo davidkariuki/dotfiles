@@ -1,6 +1,13 @@
 require("neo-tree").setup({
   close_if_last_window = true,
+  enable_diagnostics = false,
+  default_component_configs = {
+    indent = { padding = 0 },
+  },
   filesystem = {
+    follow_current_file = true,
+    hijack_netrw_behavior = "open_current",
+    use_libuv_file_watcher = true,
     window = {
       width = 30,
       mappings = {
@@ -10,7 +17,6 @@ require("neo-tree").setup({
       },
     },
     filtered_items = {
-      use_libuv_file_watcher = true,
       visible = false,
       hide_dotfiles = false,
       hide_gitignored = true,
@@ -27,6 +33,14 @@ require("neo-tree").setup({
         ".DS_Store",
         "thumbs.db",
       },
+    },
+  },
+  event_handlers = {
+    {
+      event = "neo_tree_buffer_enter",
+      handler = function(_)
+        vim.opt_local.signcolumn = "auto"
+      end,
     },
   },
 })
