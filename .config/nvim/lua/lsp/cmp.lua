@@ -146,6 +146,7 @@ lspconfig.cssls.setup({})
 lspconfig.cssmodules_ls.setup({})
 lspconfig.pyright.setup({})
 lspconfig.tsserver.setup({})
+lspconfig.solargraph.setup({})
 lspconfig.denols.setup({
   root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
 })

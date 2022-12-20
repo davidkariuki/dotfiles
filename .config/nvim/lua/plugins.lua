@@ -35,6 +35,7 @@ return require("packer").startup(function(use)
     end,
   })
   use({ "windwp/nvim-ts-autotag" })
+  use({ "RRethy/nvim-treesitter-endwise" })
   use({ "rcarriga/nvim-notify" })
 
   -- Fuzzy finder
