@@ -26,7 +26,6 @@
     ~/.config/dunst: .config/dunst
     ~/.config/betterlockscreenrc: .config/betterlockscreenrc
     ~/.config/wallpaper: wallpaper
-    ~/.config/i3-scrot.conf: .config/i3-scrot.conf
     ~/.local/share/fonts/codicon.ttf: fonts/codicon.ttf
     ~/.local/share/fonts/DejaVuSansMono-wifi-ramp.ttf: fonts/DejaVuSansMono-wifi-ramp.ttf
     ~/.local/share/fonts/Font Awesome 6 Brands-Regular-400.otf: fonts/Font Awesome 6 Brands-Regular-400.otf

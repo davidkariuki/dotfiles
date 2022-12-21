@@ -12,5 +12,5 @@ fi
 yay -S --needed --answerclean Y --answerdiff N --removemake zsh \
 	tmux bat neofetch kitty lazygit stylua go neovim-nightly-bin btop rbenv ruby-build ripgrep shellcheck nordvpn-bin exa \
 	slack-desktop discord mono cmake github-cli xclip brightnessctl feh bluez bluez-utils rofi picom rofi-calc starship \
-	noto-fonts betterlockscreen-git dunst jq xfce4-power-manager lf polybar unzip i3-scrot man lxappearance web-greeter \
+	noto-fonts betterlockscreen-git dunst jq xfce4-power-manager lf polybar unzip flameshot man lxappearance web-greeter \
 	spotify spicetify-cli pulseaudio-bluetooth xss-lock pacman-contrib otf-nerd-fonts-fira-code noto-fonts-cjk noto-fonts-emoji
