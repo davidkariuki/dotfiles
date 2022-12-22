@@ -1,4 +1,8 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
+
+if [ -e ~/.secrets ]; then
+  source ~/.secrets
+fi
 
 # Terminate already running bar instances
 killall -q polybar
