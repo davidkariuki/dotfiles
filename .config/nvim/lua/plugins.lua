@@ -12,6 +12,14 @@ end
 
 local packer_bootstrap = ensure_packer()
 
+-- Auto compile packer when this file is touched
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]])
+
 return require("packer").startup(function(use)
   use({ "wbthomason/packer.nvim" })
 
@@ -30,6 +38,7 @@ return require("packer").startup(function(use)
       require("hlargs").setup()
     end,
   })
+
   use({
     "windwp/nvim-autopairs",
     config = function()
