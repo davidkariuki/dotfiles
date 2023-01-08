@@ -11,8 +11,7 @@ For Arch with i3
 #### Symlink dotfiles and run installation script
 
 ```zsh
-mkdir ~/projects
-mkdir ~/Pictures
+mkdir {~/projects,~/Pictures}
 ```
 
 ```zsh
