@@ -11,8 +11,7 @@ fi
 updates=$((updates_arch + updates_aur))
 
 if [ "$updates" -gt 0 ]; then
-	echo "輦 $updates"
+	echo "ﮮ $updates"
 else
-	# echo "聯"
 	echo ""
 fi
