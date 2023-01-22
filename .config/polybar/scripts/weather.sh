@@ -47,7 +47,7 @@ if [ -f ~/.secrets ]; then
 fi
 
 KEY=$OPENWEATHER_KEY
-CITY="London"
+CITY="Birmingham"
 UNITS="metric"
 SYMBOL="°"
 
