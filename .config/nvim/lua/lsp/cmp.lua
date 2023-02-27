@@ -127,7 +127,7 @@ local lsp_defaults = {
 local lspconfig = require("lspconfig")
 lspconfig.util.default_config = vim.tbl_deep_extend("force", lspconfig.util.default_config, lsp_defaults)
 
-lspconfig["sumneko_lua"].setup({
+lspconfig.lua_ls.setup({
   settings = {
     Lua = {
       diagnostics = {
