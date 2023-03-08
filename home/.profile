@@ -1,1 +1,1 @@
-export TERMINAL=/usr/bin/wezterm
+export TERMINAL=/usr/bin/kitty
