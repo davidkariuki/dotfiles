@@ -13,7 +13,34 @@ local has_words_before = function()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
-local icons = require("lsp.icons")
+local icons = {
+  Text = "",
+  Method = "",
+  Function = "",
+  Constructor = "",
+  Field = "",
+  Variable = "",
+  Class = "",
+  Interface = "",
+  Module = "",
+  Property = "",
+  Unit = "",
+  Value = "",
+  Enum = "",
+  Keyword = "",
+  Snippet = "",
+  Color = "",
+  File = "",
+  Reference = "",
+  Folder = "",
+  EnumMember = "",
+  Constant = "",
+  Struct = "",
+  Event = "",
+  Operator = "",
+  TypeParameter = "",
+}
+
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -61,7 +88,6 @@ cmp.setup({
         fallback()
       end
     end, { "i", "s" }),
-
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       if luasnip.jumpable(-1) then
         luasnip.jump(-1)
@@ -147,6 +173,7 @@ lspconfig.cssmodules_ls.setup({})
 lspconfig.pyright.setup({})
 lspconfig.tsserver.setup({})
 lspconfig.solargraph.setup({})
+lspconfig.standardrb.setup({})
 lspconfig.denols.setup({
   root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
 })
@@ -166,6 +193,7 @@ local null_ls = require("null-ls")
 null_ls.setup({
   sources = {
     require("typescript.extensions.null-ls.code-actions"),
+    null_ls.builtins.formatting.standardrb,
     null_ls.builtins.formatting.black,
     null_ls.builtins.formatting.shfmt,
     null_ls.builtins.formatting.prettier.with({ extra_args = { "--no-semi" } }),

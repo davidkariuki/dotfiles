@@ -1,10 +1,7 @@
-local darkbuddy = require("lualine.themes.onedark")
-darkbuddy.normal.c.bg = "#1F2329"
-
 require("lualine").setup({
   options = {
     icons_enabled = true,
-    theme = darkbuddy,
+    theme = "onedark",
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
     disabled_filetypes = {
