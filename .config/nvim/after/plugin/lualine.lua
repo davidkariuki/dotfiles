@@ -1,5 +1,6 @@
 local custom = require("lualine.themes.auto")
 custom.normal.c.bg = "#16161D"
+custom.normal.c.fg = "#dcd7ba"
 
 require("lualine").setup({
   options = {
