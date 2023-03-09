@@ -10,17 +10,18 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 return require("lazy").setup({
   "wbthomason/packer.nvim",
 
   -- Syntax / Linting
-  "navarasu/onedark.nvim",
+  "rebelot/kanagawa.nvim",
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   "p00f/nvim-ts-rainbow",
   "NvChad/nvim-colorizer.lua",
-  "preservim/nerdcommenter",
+  "numToStr/Comment.nvim",
   "lukas-reineke/indent-blankline.nvim",
   "tpope/vim-surround",
   {
@@ -90,6 +91,7 @@ return require("lazy").setup({
   },
 
   --- Statusline
+  "vimpostor/vim-tpipeline",
   {
     "hoob3rt/lualine.nvim",
     dependencies = { "kyazdani42/nvim-web-devicons", lazy = true },
@@ -103,7 +105,6 @@ return require("lazy").setup({
     end,
   },
   "christoomey/vim-tmux-navigator",
-  "vimpostor/vim-tpipeline",
 
   -- Terminal
   "voldikss/vim-floaterm",

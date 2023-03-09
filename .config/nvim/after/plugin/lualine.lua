@@ -1,7 +1,10 @@
+local custom = require("lualine.themes.auto")
+custom.normal.c.bg = "#16161D"
+
 require("lualine").setup({
   options = {
     icons_enabled = true,
-    theme = "onedark",
+    theme = custom,
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
     disabled_filetypes = {
@@ -9,7 +12,7 @@ require("lualine").setup({
       winbar = {},
     },
     always_divide_middle = true,
-    globalstatus = false,
+    globalstatus = true,
     refresh = {
       statusline = 1000,
       tabline = 1000,

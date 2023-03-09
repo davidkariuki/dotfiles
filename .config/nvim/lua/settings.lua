@@ -44,14 +44,7 @@ vim.cmd("au BufEnter * set fo-=c fo-=r fo-=o")
 vim.o.termguicolors = true
 vim.o.background = "dark"
 
-require("onedark").setup({
-  style = "darker",
-  colors = {
-    bg_d = "#1f2329",
-    bg1 = "#1f2329",
-  },
-})
-require("onedark").load()
+vim.cmd("colorscheme kanagawa-dragon")
 
 -- Completion
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
@@ -90,3 +83,6 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 -- Filetypes
 vim.cmd("au BufRead,BufNewFile *.mdx setfiletype markdown.mdx")
 vim.cmd("au BufRead,BufNewFile *.conf,*.env* setfiletype zsh")
+
+-- For tpipleine
+vim.o.laststatus = 0
