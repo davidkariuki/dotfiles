@@ -13,7 +13,7 @@ local has_words_before = function()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
-local icons = require("lsp-icons")
+local icons = require("kind-icons")
 
 cmp.setup({
   snippet = {
@@ -144,16 +144,8 @@ lspconfig.eslint.setup({})
 lspconfig.emmet_ls.setup({})
 lspconfig.cssls.setup({})
 lspconfig.cssmodules_ls.setup({})
-lspconfig.pyright.setup({})
 lspconfig.tsserver.setup({})
 lspconfig.solargraph.setup({})
-lspconfig.standardrb.setup({})
-lspconfig.denols.setup({
-  root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
-})
-lspconfig.omnisharp.setup({
-  use_mono = true,
-})
 
 -- Snippets
 require("luasnip.loaders.from_vscode").lazy_load()
@@ -167,8 +159,6 @@ local null_ls = require("null-ls")
 null_ls.setup({
   sources = {
     require("typescript.extensions.null-ls.code-actions"),
-    null_ls.builtins.formatting.standardrb,
-    null_ls.builtins.formatting.black,
     null_ls.builtins.formatting.shfmt,
     null_ls.builtins.formatting.prettier.with({ extra_args = { "--no-semi" } }),
     null_ls.builtins.formatting.stylua.with({
