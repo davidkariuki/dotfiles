@@ -17,7 +17,7 @@ return require("lazy").setup({
   "wbthomason/packer.nvim",
 
   -- Syntax / Linting
-  "rebelot/kanagawa.nvim",
+  { "rebelot/kanagawa.nvim", lazy = false, priority = 1000 },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   "p00f/nvim-ts-rainbow",
   "NvChad/nvim-colorizer.lua",
@@ -108,4 +108,8 @@ return require("lazy").setup({
 
   -- Terminal
   "voldikss/vim-floaterm",
+}, {
+  ui = {
+    border = "rounded",
+  },
 })
