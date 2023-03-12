@@ -1,6 +1,7 @@
 require("neo-tree").setup({
   close_if_last_window = true,
-  enable_diagnostics = false,
+  popup_border_style = "rounded",
+  enable_diagnostics = true,
   default_component_configs = {
     indent = { padding = 0 },
   },
@@ -44,3 +45,5 @@ require("neo-tree").setup({
     },
   },
 })
+
+vim.cmd("highlight NeoTreeFloatTitle guifg=#DCD7BA guibg=#16161D")
