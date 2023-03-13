@@ -1,7 +1,7 @@
 * {
-  background-color: #1F2329;
-  selected-normal-background:  #dc6f02;
-  text-color: #979eab;
+  background-color: #16161d;
+  selected-normal-background:  #2d4f67;
+  text-color: #dcd7ba;
   font: "MonoLisa 20";
 }
 
@@ -20,7 +20,7 @@ window
   width: 35%;
   border: 2px;
   border-radius: 5px;
-  border-color: #dc6f02;
+  border-color: #dcd7ba;
 }
 
 inputbar
@@ -33,7 +33,7 @@ prompt
 {
   padding: 16px ;
   border: 0 1px 0 0;
-  text-color: #dc6f02;
+  text-color: #dcd7ba;
   font: "MonoLisa 20";
 }
 
@@ -49,7 +49,7 @@ listview
   cycle: true;
   padding: 16px;
   scrollbar: false;
-  border-color: #dc6f02;
+  border-color: #dcd7ba;
 }
 
 element
@@ -85,6 +85,6 @@ element.selected.normal {
 }
 
 button.selected {
-  background-color: #dc6f02;
-  text-color:       #dc6f02;
+  background-color: #dcd7ba;
+  text-color:       #dcd7ba;
 }
