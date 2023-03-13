@@ -222,9 +222,7 @@ mode "resize" {
 }
 
 # gaps
-gaps inner 5
-gaps outer 3
-gaps top 42
+gaps inner 2
 
 bindsym $mod+r mode "resize"
 
