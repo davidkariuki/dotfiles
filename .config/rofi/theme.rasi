@@ -72,7 +72,7 @@ element-icon
 
 element selected
 {
-  background-color:#fe8019;
+  background-color: #fe8019;
   text-color: #282828;
   border: 0% 0% 0% 0%;
   border-radius: 5px;
