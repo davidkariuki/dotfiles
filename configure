@@ -5,8 +5,8 @@ set -e
 echo "Enabling & disabling services..."
 sudo systemctl enable nordvpnd.service --now
 sudo systemctl enable bluetooth.service --now
-sudo systemctl enable sddm.service
 sudo systemctl disable lightdm.service
+sudo systemctl enable sddm.service
 sudo systemctl enable betterlockscreen@$USER --now
 sudo usermod -aG nordvpn $USER
 sudo usermod -aG video $USER
@@ -59,6 +59,7 @@ sudo cp 30-touchpad.conf /etc/X11/xorg.conf.d/
 sudo cp backlight.rules /etc/udev/rules.d/
 sudo cp -R sugar-candy /usr/share/sddm/themes/
 sudo cp wallpaper/1.jpg /usr/share/sddm/themes/sugar-candy/Backgrounds/
+sudo cp sddm.conf /etc/
 
 sleep 2
 echo "Installation complete."

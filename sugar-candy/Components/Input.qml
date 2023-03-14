@@ -45,6 +45,7 @@ Column {
 
             id: selectUser
 
+            displayText: ""
             width: parent.height
             height: parent.height
             anchors.left: parent.left
