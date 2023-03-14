@@ -57,7 +57,8 @@ clear
 echo "Configuring devices..."
 sudo cp 30-touchpad.conf /etc/X11/xorg.conf.d/
 sudo cp backlight.rules /etc/udev/rules.d/
-sudo cp -R sugar-candy/ /usr/share/sddm/themes/
+sudo cp -R sugar-candy /usr/share/sddm/themes/
+sudo cp wallpaper/1.jpg /usr/share/sddm/themes/sugar-candy/Backgrounds/
 
 sleep 2
 echo "Installation complete."
