@@ -7,13 +7,13 @@
 - clean: ["~"]
 
 - link:
-    ~/.profile: home/.profile
-    ~/.tmux.conf: home/.tmux.conf
-    ~/.zshrc: home/.zshrc
+    ~/.profile: .config/home/.profile
+    ~/.tmux.conf: .config/home/.tmux.conf
+    ~/.zshrc: .config/home/.zshrc
     ~/.config/starship.toml: .config/starship.toml
-    ~/.Xresources: home/.Xresources
-    ~/.xinitrc: home/.xinitrc
-    ~/.gitconfig: home/.gitconfig
+    ~/.Xresources: .config/home/.Xresources
+    ~/.xinitrc: .config/home/.xinitrc
+    ~/.gitconfig: .config/home/.gitconfig
     ~/.config/nvim: .config/nvim
     ~/.config/tmuxinator: .config/tmuxinator
     ~/.config/kitty: .config/kitty
@@ -25,13 +25,13 @@
     ~/.config/ranger: .config/ranger
     ~/.config/dunst: .config/dunst
     ~/.config/betterlockscreenrc: .config/betterlockscreenrc
-    ~/.config/wallpaper: wallpaper
-    ~/.local/share/fonts/codicon.ttf: fonts/codicon.ttf
-    ~/.local/share/fonts/DejaVuSansMono-wifi-ramp.ttf: fonts/DejaVuSansMono-wifi-ramp.ttf
-    ~/.local/share/fonts/Font Awesome 6 Brands-Regular-400.otf: fonts/Font Awesome 6 Brands-Regular-400.otf
-    ~/.local/share/fonts/Font Awesome 6 Free-Regular-400.otf: fonts/Font Awesome 6 Free-Regular-400.otf
-    ~/.local/share/fonts/Font Awesome 6 Free-Solid-900.otf: fonts/Font Awesome 6 Free-Solid-900.otf
-    ~/.local/share/fonts/weathericons-regular-webfont.ttf: fonts/weathericons-regular-webfont.ttf
+    ~/.config/wallpaper: .config/wallpaper
+    ~/.local/share/fonts/codicon.ttf: .config/fonts/codicon.ttf
+    ~/.local/share/fonts/DejaVuSansMono-wifi-ramp.ttf: .config/fonts/DejaVuSansMono-wifi-ramp.ttf
+    ~/.local/share/fonts/Font Awesome 6 Brands-Regular-400.otf: .config/fonts/Font Awesome 6 Brands-Regular-400.otf
+    ~/.local/share/fonts/Font Awesome 6 Free-Regular-400.otf: .config/fonts/Font Awesome 6 Free-Regular-400.otf
+    ~/.local/share/fonts/Font Awesome 6 Free-Solid-900.otf: .config/fonts/Font Awesome 6 Free-Solid-900.otf
+    ~/.local/share/fonts/weathericons-regular-webfont.ttf: .config/fonts/weathericons-regular-webfont.ttf
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
