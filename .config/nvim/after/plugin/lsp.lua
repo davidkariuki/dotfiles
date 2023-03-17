@@ -146,6 +146,7 @@ lspconfig.cssls.setup({})
 lspconfig.cssmodules_ls.setup({})
 lspconfig.tsserver.setup({})
 lspconfig.solargraph.setup({})
+lspconfig.rust_analyzer.setup({})
 
 -- Snippets
 require("luasnip.loaders.from_vscode").lazy_load()
