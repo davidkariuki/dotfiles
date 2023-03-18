@@ -68,14 +68,16 @@ sign({ name = "DiagnosticSignInfo", text = " " })
 
 vim.diagnostic.config({
   virtual_text = false,
-  severity_sort = true,
+  signs = true,
   float = {
     border = "rounded",
-    source = "always",
+    source = "if_many",
     header = "",
     prefix = "",
   },
 })
+
+vim.api.nvim_set_hl(0, "FloatBorder", { bg = "None" })
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
 vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
