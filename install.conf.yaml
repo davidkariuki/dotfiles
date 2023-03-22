@@ -22,7 +22,7 @@
     ~/.config/polybar: .config/polybar
     ~/.config/rofi: .config/rofi
     ~/.config/picom: .config/picom
-    ~/.config/ranger: .config/ranger
+    ~/.config/lf: .config/lf
     ~/.config/dunst: .config/dunst
     ~/.config/betterlockscreenrc: .config/betterlockscreenrc
     ~/.config/wallpaper: .config/wallpaper
