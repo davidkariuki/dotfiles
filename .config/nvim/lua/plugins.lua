@@ -41,6 +41,16 @@ return require("lazy").setup({
   "windwp/nvim-ts-autotag",
   "RRethy/nvim-treesitter-endwise",
   "rcarriga/nvim-notify",
+  {
+    "jcdickinson/codeium.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
+    config = function()
+      require("codeium").setup({})
+    end,
+  },
 
   -- Fuzzy finder
   {
