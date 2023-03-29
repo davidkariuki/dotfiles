@@ -34,7 +34,7 @@ fi
 
 if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-vi-mode ]; then
   git clone https://github.com/jeffreytse/zsh-vi-mode \
-  $ZSH_CUSTOM/plugins/zsh-vi-mode
+  ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-vi-mode
 fi
 clear
 
