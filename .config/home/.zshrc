@@ -78,7 +78,7 @@ ZSH_CUSTOM=~/.oh-my-zsh/custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ruby node docker docker-compose python sudo zsh-autosuggestions F-Sy-H)
+plugins=(zsh-vi-mode git ruby node docker docker-compose python sudo zsh-autosuggestions F-Sy-H)
 
 
 source $ZSH/oh-my-zsh.sh
@@ -161,5 +161,3 @@ export PNPM_HOME="/home/me/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 export PATH=$PATH:/home/me/.spicetify
-
-bindkey -v
