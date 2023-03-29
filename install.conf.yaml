@@ -26,6 +26,11 @@
     ~/.config/dunst: .config/dunst
     ~/.config/betterlockscreenrc: .config/betterlockscreenrc
     ~/.config/wallpaper: .config/wallpaper
+    ~/.config/gtk-2.0: .config/themes/Kanagawa-B/gtk-2.0
+    ~/.config/gtk-3.0: .config/themes/Kanagawa-B/gtk-3.0
+    ~/.config/gtk-4.0: .config/themes/Kanagawa-B/gtk-4.0
+    ~/.themes/Kanagawa-B: .config/themes/Kanagawa-B
+    ~/.icons: .config/themes/icons
     ~/.local/share/fonts/codicon.ttf: .config/fonts/codicon.ttf
     ~/.local/share/fonts/DejaVuSansMono-wifi-ramp.ttf: .config/fonts/DejaVuSansMono-wifi-ramp.ttf
     ~/.local/share/fonts/Font Awesome 6 Brands-Regular-400.otf: .config/fonts/Font Awesome 6 Brands-Regular-400.otf
