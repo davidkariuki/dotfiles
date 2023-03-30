@@ -80,6 +80,7 @@ return require("lazy").setup({
   "saadparwaiz1/cmp_luasnip",
   "rafamadriz/friendly-snippets",
   "jose-elias-alvarez/typescript.nvim",
+  "j-hui/fidget.nvim",
 
   -- Drawer
   {
