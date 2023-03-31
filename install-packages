@@ -14,4 +14,4 @@ yay -S --needed --answerclean Y --answerdiff N --removemake zsh \
 	slack-desktop discord mono cmake github-cli xclip brightnessctl feh bluez bluez-utils rofi picom rofi-calc starship \
 	noto-fonts betterlockscreen-git dunst jq xfce4-power-manager lf polybar unzip flameshot man lxappearance web-greeter \
 	spotify spicetify-cli pulseaudio-bluetooth xss-lock pacman-contrib ttf-firacode-nerd noto-fonts-cjk noto-fonts-emoji \
-	openssl libyaml npm sddm qt5-graphicaleffects qt5-quickcontrols2 qt5-svg
+	openssl libyaml npm sddm qt5-graphicaleffects qt5-quickcontrols2 qt5-svg tlp
