@@ -24,7 +24,7 @@
     ~/.config/picom: .config/picom
     ~/.config/lf: .config/lf
     ~/.config/dunst: .config/dunst
-    ~/.config/betterlockscreenrc: .config/betterlockscreenrc
+    ~/.config/betterlockscreen/betterlockscreenrc: .config/betterlockscreen/betterlockscreenrc
     ~/.config/wallpaper: .config/wallpaper
     ~/.local/share/fonts/codicon.ttf: .config/fonts/codicon.ttf
     ~/.local/share/fonts/DejaVuSansMono-wifi-ramp.ttf: .config/fonts/DejaVuSansMono-wifi-ramp.ttf
