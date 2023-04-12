@@ -226,9 +226,6 @@ gaps inner 2
 
 bindsym $mod+r mode "resize"
 
-# Bind caps as extra ctrl
-exec --no-startup-id setxkbmap -option ctrl:nocaps
-
 # Executables
 exec --no-startup-id shuf -e -n1 ~/.config/wallpaper/* | xargs feh --bg-fill
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
