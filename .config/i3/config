@@ -90,7 +90,7 @@ bindsym ctrl+space exec "rofi -modi drun,run -show drun"
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 # printscreen
-bindsym Print --release exec --no-startup-id flameshot gui --path ~/Pictures
+bindsym Print --release exec --no-startup-id flameshot gui -c --path ~/Pictures
 bindsym $mod+Print exec --no-startup-id flameshot screen --clipboard --path ~/Pictures
 
 # change focus
