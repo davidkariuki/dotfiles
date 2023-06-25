@@ -23,7 +23,13 @@ return require("lazy").setup({
   "NvChad/nvim-colorizer.lua",
   "numToStr/Comment.nvim",
   "lukas-reineke/indent-blankline.nvim",
-  "tpope/vim-surround",
+  {
+    "kylechui/nvim-surround",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({})
+    end,
+  },
   {
     "m-demare/hlargs.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
