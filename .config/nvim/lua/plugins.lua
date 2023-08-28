@@ -14,8 +14,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 return require("lazy").setup({
-  "wbthomason/packer.nvim",
-
   -- Syntax / Linting
   { "rebelot/kanagawa.nvim", lazy = false, priority = 1000 },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
