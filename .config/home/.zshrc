@@ -156,8 +156,11 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
 
-# pnpm
-export PNPM_HOME="/home/me/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
 export PATH=$PATH:/home/me/.spicetify
+
+# bun completions
+[ -s "/home/me/.bun/_bun" ] && source "/home/me/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

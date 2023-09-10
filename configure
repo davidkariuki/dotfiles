@@ -38,17 +38,17 @@ if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-vi-mode ]; then
 fi
 clear
 
-echo "Configuring pnpm..."
+echo "Configuring bun..."
 sleep 2
-if [ ! -d ~/.local/share/pnpm ]; then
-	curl -fsSL https://get.pnpm.io/install.sh | sh -
+if [ ! -d ~/.bun/bin/bun ]; then
+  curl -fsSL https://bun.sh/install | bash
 	source ~/.zshrc
 fi
 clear
 
 echo "Adding linters & formatters..."
 sleep 2
-pnpm i -g typescript prettier n vscode-langservers-extracted
+bun i -g typescript prettier n vscode-langservers-extracted
 clear
 
 echo "Installing tmux plugins..."
