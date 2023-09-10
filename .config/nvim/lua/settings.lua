@@ -19,7 +19,6 @@ vim.o.shiftround = true
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.wildmode = "list:longest"
-vim.o.pastetoggle = "<Leader>p"
 vim.o.equalalways = true
 vim.o.ch = 1
 vim.o.number = true

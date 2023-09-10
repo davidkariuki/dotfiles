@@ -150,9 +150,6 @@ unset __conda_setup
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export DENO_INSTALL="/home/me/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-
 export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
 

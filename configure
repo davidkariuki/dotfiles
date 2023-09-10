@@ -48,7 +48,7 @@ clear
 
 echo "Adding linters & formatters..."
 sleep 2
-bun i -g typescript prettier n vscode-langservers-extracted
+bun i -g typescript prettier vscode-langservers-extracted
 clear
 
 echo "Installing tmux plugins..."
