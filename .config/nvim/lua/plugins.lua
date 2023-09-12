@@ -15,9 +15,8 @@ vim.opt.rtp:prepend(lazypath)
 
 return require("lazy").setup({
   -- Syntax / Linting
-  { "rebelot/kanagawa.nvim",           lazy = false,       priority = 1000 },
+  { "rebelot/kanagawa.nvim", lazy = false, priority = 1000 },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-  "p00f/nvim-ts-rainbow",
   "NvChad/nvim-colorizer.lua",
   "numToStr/Comment.nvim",
   "lukas-reineke/indent-blankline.nvim",
