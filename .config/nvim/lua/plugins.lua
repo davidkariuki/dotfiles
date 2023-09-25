@@ -92,14 +92,13 @@ return require("lazy").setup({
   -- Drawer
   {
     "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
+    branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "kyazdani42/nvim-web-devicons",
+      "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
     },
   },
-
   -- Git
   {
     "lewis6991/gitsigns.nvim",
@@ -112,7 +111,7 @@ return require("lazy").setup({
   "vimpostor/vim-tpipeline",
   {
     "hoob3rt/lualine.nvim",
-    dependencies = { "kyazdani42/nvim-web-devicons", lazy = true },
+    dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
   },
 
   -- Navigation
