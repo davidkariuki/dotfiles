@@ -1,8 +1,9 @@
-vim.opt.list = true
-vim.g.indent_blankline_char = "▏"
-
-require("indent_blankline").setup({
-  show_current_context = false,
-  show_current_context_start = false,
+require("ibl").setup({
+  indent = {
+    char = "▏",
+  },
+  scope = {
+    enabled = false,
+  },
   use_treesitter = true,
 })

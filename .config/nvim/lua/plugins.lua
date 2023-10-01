@@ -19,7 +19,7 @@ return require("lazy").setup({
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   "NvChad/nvim-colorizer.lua",
   "numToStr/Comment.nvim",
-  "lukas-reineke/indent-blankline.nvim",
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
   {
     "kylechui/nvim-surround",
     event = "VeryLazy",
