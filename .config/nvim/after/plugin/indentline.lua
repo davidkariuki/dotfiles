@@ -5,5 +5,4 @@ require("ibl").setup({
   scope = {
     enabled = false,
   },
-  use_treesitter = true,
 })
