@@ -151,27 +151,3 @@ lspconfig.rust_analyzer.setup({})
 
 -- Snippets
 require("luasnip.loaders.from_vscode").lazy_load()
-
--- Setup null-ls for formatting
-require("mason-null-ls").setup({
-  automatic_setup = true,
-})
-
-local null_ls = require("null-ls")
-null_ls.setup({
-  sources = {
-    require("typescript.extensions.null-ls.code-actions"),
-    null_ls.builtins.formatting.shfmt,
-    null_ls.builtins.formatting.prettier.with({ extra_args = { "--no-semi" } }),
-    null_ls.builtins.formatting.stylua.with({
-      extra_args = { "--indent-type", "Spaces", "--indent-width", 2 },
-    }),
-  },
-  on_attach = on_attach,
-})
-
-require("mason-null-ls").setup({
-  ensure_installed = nil,
-  automatic_installation = true,
-  automatic_setup = true,
-})

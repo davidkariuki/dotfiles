@@ -66,12 +66,11 @@ return require("lazy").setup({
 
   -- LSP and completion
   {
-    "jose-elias-alvarez/null-ls.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    "stevearc/conform.nvim",
+    opts = {},
   },
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
-  "jayp0521/mason-null-ls.nvim",
   "neovim/nvim-lspconfig",
   "hrsh7th/cmp-nvim-lua",
   "hrsh7th/cmp-nvim-lsp",
@@ -83,7 +82,6 @@ return require("lazy").setup({
   "L3MON4D3/LuaSnip",
   "saadparwaiz1/cmp_luasnip",
   "rafamadriz/friendly-snippets",
-  "jose-elias-alvarez/typescript.nvim",
   {
     "j-hui/fidget.nvim",
     tag = "legacy",
