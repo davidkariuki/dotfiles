@@ -59,9 +59,8 @@ return {
       "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
       { noremap = true, silent = true }
     )
-    map("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
-    map("n", "<leader>g", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
-    map("n", "<leader>d", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
-    map("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Find string under cursor in cwd" })
+    map("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", {})
+    map("n", "<leader>g", "<cmd>Telescope live_grep<cr>", {})
+    map("n", "<leader>b", "<cmd>Telescope buffers<cr>", {})
   end,
 }

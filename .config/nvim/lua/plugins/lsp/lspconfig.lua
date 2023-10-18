@@ -29,6 +29,7 @@ return {
       keymap.set("n", "<leader>d", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
       keymap.set("n", "<leader>D", vim.diagnostic.open_float, opts)
       keymap.set("n", "gn", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
+      keymap.set("n", "gp", vim.diagnostic.goto_prev, opts) -- jump to next diagnostic in buffer
       keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
       keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
     end
