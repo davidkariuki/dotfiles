@@ -36,5 +36,7 @@ return {
     })
 
     vim.cmd("colorscheme kanagawa-dragon")
+    vim.cmd("highlight TelescopeBorder guibg=none")
+    vim.cmd("highlight TelescopeTitle guibg=none")
   end,
 }
