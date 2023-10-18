@@ -26,8 +26,8 @@ return {
       keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
       keymap.set({ "n", "v" }, "<leader>a", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
       keymap.set("n", "<leader>r", vim.lsp.buf.rename, opts) -- smart rename
-      keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
-      keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
+      keymap.set("n", "<leader>d", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
+      keymap.set("n", "<leader>D", vim.diagnostic.open_float, opts)
       keymap.set("n", "gn", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
       keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
       keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
