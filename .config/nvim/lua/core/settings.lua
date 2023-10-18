@@ -43,38 +43,11 @@ vim.cmd("au BufEnter * set fo-=c fo-=r fo-=o")
 vim.o.termguicolors = true
 vim.o.background = "dark"
 
-vim.cmd("colorscheme kanagawa-dragon")
-
 -- Completion
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.cmd("set shortmess+=c")
 vim.g.completion_confirm_key = ""
 vim.g.completion_matching_strategy_list = { "exact", "substring", "fuzzy" }
-
-local sign = function(opts)
-  vim.fn.sign_define(opts.name, {
-    texthl = opts.name,
-    text = opts.text,
-    numhl = "",
-  })
-end
-
--- Diagnostics
-sign({ name = "DiagnosticSignError", text = " " })
-sign({ name = "DiagnosticSignWarn", text = " " })
-sign({ name = "DiagnosticSignHint", text = "" })
-sign({ name = "DiagnosticSignInfo", text = " " })
-
-vim.diagnostic.config({
-  virtual_text = false,
-  signs = true,
-  float = {
-    border = "rounded",
-    source = "if_many",
-    header = "",
-    prefix = "",
-  },
-})
 
 vim.api.nvim_set_hl(0, "FloatBorder", { bg = "None" })
 

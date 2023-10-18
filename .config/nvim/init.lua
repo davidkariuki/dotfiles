@@ -1,8 +1,5 @@
+-- Keybinds and settings
+require("core")
+
 -- Lazy bootstrap & plugins
-require("plugins")
-
--- General settings
-pcall(require("settings"))
-
--- Keybinds
-require("keybinds")
+require("lazy-nvim")
