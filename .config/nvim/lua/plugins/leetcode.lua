@@ -10,7 +10,7 @@ return {
   opts = {
     domain = "com",
     arg = "leetcode.nvim",
-    lang = "ruby",
+    lang = "typescript",
     sql = "mysql",
     directory = vim.fn.stdpath("data") .. "/leetcode/",
     logging = true,
