@@ -1,6 +1,6 @@
 return {
   "hoob3rt/lualine.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
+  dependencies = { "DaikyXendo/nvim-web-devicons", lazy = true },
   config = function()
     local custom = require("lualine.themes.auto")
     custom.normal.c.bg = "#16161D"
