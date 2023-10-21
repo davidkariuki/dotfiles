@@ -12,7 +12,11 @@ return {
       popup_border_style = "rounded",
       enable_diagnostics = true,
       default_component_configs = {
-        indent = { padding = 0 },
+        indent = {
+          with_markers = false,
+          with_expanders = true,
+          padding = 0,
+        },
       },
       filesystem = {
         follow_current_file = {
