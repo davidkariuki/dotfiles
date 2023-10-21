@@ -2,14 +2,10 @@ return {
   "hoob3rt/lualine.nvim",
   dependencies = { "DaikyXendo/nvim-web-devicons", lazy = true },
   config = function()
-    local custom = require("lualine.themes.auto")
-    custom.normal.c.bg = "#16161D"
-    custom.normal.c.fg = "#dcd7ba"
-
     require("lualine").setup({
       options = {
         icons_enabled = true,
-        theme = custom,
+        theme = "catppuccin-mocha",
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {
