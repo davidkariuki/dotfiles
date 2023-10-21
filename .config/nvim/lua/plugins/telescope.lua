@@ -56,5 +56,6 @@ return {
     vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", {})
     vim.keymap.set("n", "<leader>g", "<cmd>Telescope live_grep<cr>", {})
     vim.keymap.set("n", "<leader>fs", "<cmd>Telescope grep_string<cr>", {})
+    vim.keymap.set("n", "<leader>b", "<cmd>Telescope buffers<cr>", {})
   end,
 }
