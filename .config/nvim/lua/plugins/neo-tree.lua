@@ -17,6 +17,7 @@ return {
       filesystem = {
         follow_current_file = {
           enabled = true,
+          leave_dirs_open = true,
         },
         hijack_netrw_behavior = "open_current",
         use_libuv_file_watcher = true,
@@ -58,6 +59,6 @@ return {
     })
 
     vim.keymap.set("n", "<Leader>n", "<cmd>Neotree toggle<cr>", { noremap = true })
-    vim.cmd("highlight NeoTreeFloatTitle guifg=#DCD7BA guibg=#16161D")
+    vim.cmd.highlight("NeoTreeFloatTitle guifg=#DCD7BA guibg=#16161D")
   end,
 }
