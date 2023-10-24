@@ -2,7 +2,6 @@ local map = vim.keymap.set
 
 map("i", "jk", "<Esc>", { noremap = true })
 map("n", ",f", "<cmd>lua vim.lsp.buf.format({ timeout_ms = 2000 })<cr>", { noremap = true })
-map("n", "\\", "<cmd>lua require'hop'.hint_words()<cr>", { noremap = true })
 map("n", "<Leader><Leader>", "<cmd>noh<CR>", { noremap = true })
 map("n", "<Leader>w", "<cmd>up<CR>", { noremap = true })
 map("v", "<Leader>y", '"+y', { noremap = true })
