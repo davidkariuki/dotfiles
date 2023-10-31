@@ -62,7 +62,6 @@ return {
     -- LSP Servers
     lspconfig.html.setup({})
     lspconfig.eslint.setup({})
-    lspconfig.emmet_ls.setup({})
     lspconfig.cssls.setup({})
     lspconfig.cssmodules_ls.setup({})
     lspconfig.tsserver.setup({})
@@ -85,11 +84,6 @@ return {
         header = "",
         prefix = "",
       },
-    })
-
-    -- configure emmet language server
-    lspconfig.emmet_ls.setup({
-      filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
     })
 
     -- configure python server
