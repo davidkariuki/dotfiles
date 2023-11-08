@@ -2,7 +2,7 @@
   background-color: #16161d;
   selected-normal-background:  #2d4f67;
   text-color: #b4befe;
-  font: "MonoLisa 20";
+  font: "MonoLisa Nerd Font 20";
 }
 
 window
@@ -34,14 +34,14 @@ prompt
   padding: 16px ;
   border: 0 1px 0 0;
   text-color: #f9e2af;
-  font: "MonoLisa 20";
+  font: "MonoLisa Nerd Font 20";
 }
 
 entry
 {
   padding: 16px;
   text-color: #f9e2af;
-  font: "MonoLisa 20";
+  font: "MonoLisa Nerd Font 20";
 }
 
 listview

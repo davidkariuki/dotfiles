@@ -5,9 +5,6 @@ set -e
 echo "Enabling & disabling services..."
 sudo systemctl enable nordvpnd.service --now
 sudo systemctl enable bluetooth.service --now
-sudo systemctl disable lightdm.service
-sudo systemctl enable sddm.service
-sudo systemctl enable betterlockscreen@$USER --now
 sudo usermod -aG nordvpn $USER
 sudo usermod -aG video $USER
 

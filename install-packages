@@ -1,17 +1,7 @@
 #!/usr/bin/env bash
 
 echo "Installing applications..."
-sudo pacman -S --needed --noconfirm base-devel git python
 
-if [ -z $(which yay) ]; then
-	mkdir -p ~/Downloads
-	cd ~/Downloads && git clone https://aur.archlinux.org/yay.git
-	cd yay && makepkg -si
-fi
-
-yay -S --needed --answerclean Y --answerdiff N --removemake --noconfirm zsh \
-	tmux bat neofetch kitty lazygit stylua go neovim-nightly-bin btop rbenv ruby-build ripgrep shellcheck nordvpn-bin exa \
-	slack-desktop discord mono cmake github-cli xclip brightnessctl feh bluez bluez-utils rofi picom rofi-calc starship \
-	noto-fonts betterlockscreen-git dunst jq xfce4-power-manager lf polybar unzip flameshot man lxappearance web-greeter \
-	spotify spicetify-cli pulseaudio-bluetooth xss-lock pacman-contrib ttf-firacode-nerd noto-fonts-cjk noto-fonts-emoji \
-	openssl libyaml npm sddm qt5-graphicaleffects qt5-quickcontrols2 qt5-svg tlp
+yay -S --needed --answerclean Y --answerdiff N --removemake --noconfirm zsh fontforge \
+	tmux bat neofetch kitty lazygit go neovim-nightly-bin btop rbenv ruby-build ripgrep exa \
+	discord github-cli picom starship lf polybar flameshot rofi-calc brightnessctl nordvpn-bin
