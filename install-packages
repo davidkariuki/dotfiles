@@ -3,5 +3,5 @@
 echo "Installing applications..."
 
 yay -S --needed --answerclean Y --answerdiff N --removemake --noconfirm zsh fontforge \
-	tmux bat neofetch kitty lazygit go neovim-nightly-bin btop rbenv ruby-build ripgrep exa \
+	tmux bat neofetch wezterm lazygit go neovim-nightly-bin btop rbenv ruby-build ripgrep exa \
 	discord github-cli picom starship lf polybar flameshot rofi-calc brightnessctl nordvpn-bin

@@ -107,7 +107,7 @@ floating_modifier $mod
 bindsym $mod+F2 exec firefox
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec wezterm
 
 # kill focused window
 bindsym $mod+q kill
