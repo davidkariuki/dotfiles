@@ -1,2 +1,2 @@
-export TERMINAL=/usr/bin/kitty
+export TERMINAL=/usr/bin/wezterm
 . "$HOME/.cargo/env"

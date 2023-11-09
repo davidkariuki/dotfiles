@@ -72,7 +72,7 @@ font pango: Noto Sans 12
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l
 # exec --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --timer 360 "betterlockscreen -l blur --display 1 --span" "" &
 
 # set desktop background with custom effect
