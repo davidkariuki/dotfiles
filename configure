@@ -2,6 +2,13 @@
 
 set -e
 
+echo "Configuring devices..."
+sudo cp .config/devices/00-keyboard.conf /etc/X11/xorg.conf.d/
+sudo cp .config/devices/backlight.rules /etc/udev/rules.d/
+sudo cp -R .config/sddm/catppuccin-mocha /usr/share/sddm/themes/
+sudo cp .config/wallpaper/wall.jpg /usr/share/sddm/themes/catppuccin-mocha/backgrounds/
+sudo cp .config/sddm/sddm.conf /etc/
+
 echo "Enabling & disabling services..."
 sudo systemctl enable nordvpnd.service --now
 sudo systemctl enable bluetooth.service --now
@@ -35,6 +42,14 @@ if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-vi-mode ]; then
 fi
 clear
 
+echo "Installing tmux plugins..."
+sleep 2
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+	mkdir -p ~/.tmux/plugins
+	git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
+fi
+clear
+
 echo "Configuring bun..."
 sleep 2
 if [ ! -d ~/.bun/bin/bun ]; then
@@ -47,22 +62,6 @@ echo "Adding linters & formatters..."
 sleep 2
 bun i -g typescript prettier vscode-langservers-extracted
 clear
-
-echo "Installing tmux plugins..."
-sleep 2
-if [ ! -d ~/.tmux/plugins/tpm ]; then
-	mkdir -p ~/.tmux/plugins
-	git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
-fi
-clear
-
-echo "Configuring devices..."
-sudo cp .config/devices/30-touchpad.conf /etc/X11/xorg.conf.d/
-sudo cp .config/devices/00-keyboard.conf /etc/X11/xorg.conf.d/
-sudo cp .config/devices/backlight.rules /etc/udev/rules.d/
-sudo cp -R .config/sddm/sugar-candy /usr/share/sddm/themes/
-sudo cp .config/wallpaper/wall.jpg /usr/share/sddm/themes/sugar-candy/Backgrounds/
-sudo cp .config/sddm/sddm.conf /etc/
 
 sleep 2
 echo "Installation complete."

@@ -4,4 +4,5 @@ echo "Installing applications..."
 
 yay -S --needed --answerclean Y --answerdiff N --removemake --noconfirm zsh fontforge \
 	tmux bat neofetch wezterm lazygit go neovim-nightly-bin btop rbenv ruby-build ripgrep exa \
-	discord github-cli picom starship lf polybar flameshot rofi-calc brightnessctl nordvpn-bin
+	discord github-cli picom starship lf polybar flameshot rofi-calc brightnessctl nordvpn-bin \
+  qt5-graphicaleffects qt5-svg qt5-quickcontrols2
