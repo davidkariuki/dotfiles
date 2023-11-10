@@ -27,10 +27,6 @@
     ~/.config/betterlockscreen/betterlockscreenrc: .config/betterlockscreen/betterlockscreenrc
     ~/.config/wallpaper: .config/wallpaper
     ~/.local/share/fonts/codicon.ttf: .config/fonts/codicon.ttf
-    ~/.local/share/fonts/DejaVuSansMono-wifi-ramp.ttf: .config/fonts/DejaVuSansMono-wifi-ramp.ttf
-    ~/.local/share/fonts/Font Awesome 6 Brands-Regular-400.otf: .config/fonts/Font Awesome 6 Brands-Regular-400.otf
-    ~/.local/share/fonts/Font Awesome 6 Free-Regular-400.otf: .config/fonts/Font Awesome 6 Free-Regular-400.otf
-    ~/.local/share/fonts/Font Awesome 6 Free-Solid-900.otf: .config/fonts/Font Awesome 6 Free-Solid-900.otf
     ~/.local/share/fonts/weathericons-regular-webfont.ttf: .config/fonts/weathericons-regular-webfont.ttf
 
 - shell:
