@@ -127,12 +127,8 @@ alias ls="exa --icons"
 LOCAL_PATH="${HOME}/.local"
 export PATH=$PATH:$LOCAL_PATH/bin
 export PATH=$PATH:/snap/bin
-export PATH="$HOME/.rbenv/bin:$PATH"
 prompt_context(){}
 
-eval "$(rbenv init -)"
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-export PATH="$PATH:$GEM_HOME/bin"
 
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/me/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -161,3 +157,6 @@ export PATH=$PATH:/home/me/.spicetify
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# zoxide
+eval "$(zoxide init zsh)"

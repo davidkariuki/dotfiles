@@ -3,15 +3,15 @@
 set -e
 
 echo "Configuring devices..."
-sudo cp .config/devices/00-keyboard.conf /etc/X11/xorg.conf.d/
-sudo cp .config/devices/backlight.rules /etc/udev/rules.d/
+#sudo cp .config/devices/00-keyboard.conf /etc/X11/xorg.conf.d/
+#sudo cp .config/devices/backlight.rules /etc/udev/rules.d/
 sudo cp -R .config/sddm/catppuccin-mocha /usr/share/sddm/themes/
 sudo cp .config/wallpaper/wall.jpg /usr/share/sddm/themes/catppuccin-mocha/backgrounds/
 sudo cp .config/sddm/sddm.conf /etc/
 
 echo "Enabling & disabling services..."
-sudo systemctl enable nordvpnd.service --now
-sudo systemctl enable bluetooth.service --now
+#sudo systemctl enable nordvpnd.service --now
+#sudo systemctl enable bluetooth.service --now
 sudo usermod -aG nordvpn $USER
 sudo usermod -aG video $USER
 

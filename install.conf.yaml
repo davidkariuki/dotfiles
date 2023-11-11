@@ -7,24 +7,15 @@
 - clean: ["~"]
 
 - link:
-    ~/.profile: .config/home/.profile
     ~/.tmux.conf: .config/home/.tmux.conf
     ~/.zshrc: .config/home/.zshrc
     ~/.config/starship.toml: .config/starship.toml
-    ~/.Xresources: .config/home/.Xresources
-    ~/.xinitrc: .config/home/.xinitrc
     ~/.gitconfig: .config/home/.gitconfig
     ~/.config/nvim: .config/nvim
     ~/.config/tmuxinator: .config/tmuxinator
     ~/.config/kitty: .config/kitty
     ~/.config/wezterm: .config/wezterm
-    ~/.config/i3/config: .config/i3/config
-    ~/.config/polybar: .config/polybar
-    ~/.config/rofi: .config/rofi
-    ~/.config/picom: .config/picom
     ~/.config/lf: .config/lf
-    ~/.config/dunst: .config/dunst
-    ~/.config/betterlockscreen/betterlockscreenrc: .config/betterlockscreen/betterlockscreenrc
     ~/.config/wallpaper: .config/wallpaper
     ~/.local/share/fonts/codicon.ttf: .config/fonts/codicon.ttf
     ~/.local/share/fonts/weathericons-regular-webfont.ttf: .config/fonts/weathericons-regular-webfont.ttf
