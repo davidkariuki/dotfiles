@@ -11,7 +11,11 @@ end)
 
 return {
 	enable_wayland = false,
-	font = wezterm.font("MonoLisa Nerd Font"),
+	font = wezterm.font_with_fallback({
+		"MonoLisa Nerd Font",
+		"Fira Code",
+	}),
+
 	font_size = 9.5,
 	window_decorations = "NONE",
 	window_background_opacity = 0.95,

@@ -4,7 +4,7 @@ echo "Installing applications..."
 
 yay -S --needed --answerclean Y --answerdiff N --removemake --noconfirm zsh \
 	tmux bat neofetch wezterm lazygit go neovim-nightly-bin btop ripgrep exa \
-	discord github-cli starship lf nordvpn-bin zoxide ulauncher \
+	discord github-cli starship lf nordvpn-bin zoxide ulauncher fzf \
 	qt5-graphicaleffects qt5-svg qt5-quickcontrols2 noto-fonts-emoji ttf-font-awesome \
   gnome-shell-extension-pop-shell-git catppuccin-cursors-mocha
 
