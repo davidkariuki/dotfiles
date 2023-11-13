@@ -2,21 +2,21 @@
 
 set -e
 
-echo "Configuring devices..."
-#sudo cp .config/devices/00-keyboard.conf /etc/X11/xorg.conf.d/
-#sudo cp .config/devices/backlight.rules /etc/udev/rules.d/
+echo "Configuring npm & bun"
+mkdir -p ~/.npm-global
+npm config set prefix ~/.npm-global
+npm i -g bun
+
+echo "Configuring sddm..."
 sudo cp -R .config/sddm/catppuccin-mocha /usr/share/sddm/themes/
-sudo cp .config/wallpaper/wall.jpg /usr/share/sddm/themes/catppuccin-mocha/backgrounds/
 sudo cp .config/sddm/sddm.conf /etc/
 
 echo "Enabling & disabling services..."
-#sudo systemctl enable nordvpnd.service --now
-#sudo systemctl enable bluetooth.service --now
+sudo systemctl enable bluetooth.service --now
+sudo systemctl enable nordvpnd.service --now
 sudo usermod -aG nordvpn $USER
-sudo usermod -aG video $USER
 
 echo "Starting Desktop Configuration..."
-sleep 2
 
 if ! [[ $SHELL == *"zsh"* ]]; then
 	chsh -s $(which zsh)
@@ -40,7 +40,6 @@ if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-vi-mode ]; then
   git clone https://github.com/jeffreytse/zsh-vi-mode \
   ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-vi-mode
 fi
-clear
 
 echo "Installing tmux plugins..."
 sleep 2
@@ -48,20 +47,5 @@ if [ ! -d ~/.tmux/plugins/tpm ]; then
 	mkdir -p ~/.tmux/plugins
 	git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 fi
-clear
 
-echo "Configuring bun..."
-sleep 2
-if [ ! -d ~/.bun/bin/bun ]; then
-  curl -fsSL https://bun.sh/install | bash
-	source ~/.zshrc
-fi
-clear
-
-echo "Adding linters & formatters..."
-sleep 2
-bun i -g typescript prettier vscode-langservers-extracted
-clear
-
-sleep 2
 echo "Installation complete."
