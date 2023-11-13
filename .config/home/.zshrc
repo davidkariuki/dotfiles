@@ -121,7 +121,6 @@ export BAT_THEME="TwoDark"
 alias cat="bat"
 alias vim="nvim"
 alias lg="lazygit"
-alias tm="tmuxinator"
 alias ls="exa --icons"
 
 LOCAL_PATH="${HOME}/.local"
