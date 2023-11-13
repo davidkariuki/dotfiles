@@ -12,7 +12,6 @@
     ~/.config/starship.toml: .config/starship.toml
     ~/.gitconfig: .config/home/.gitconfig
     ~/.config/nvim: .config/nvim
-    ~/.config/tmuxinator: .config/tmuxinator
     ~/.config/kitty: .config/kitty
     ~/.config/wezterm: .config/wezterm
     ~/.config/lf: .config/lf
