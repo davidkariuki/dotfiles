@@ -11,7 +11,7 @@ echo "Configuring sddm..."
 sudo cp -R .config/sddm/catppuccin-mocha /usr/share/sddm/themes/
 sudo cp .config/sddm/sddm.conf /etc/
 
-echo "Enabling & disabling services..."
+echo "Enabling services..."
 sudo systemctl enable bluetooth.service --now
 sudo systemctl enable nordvpnd.service --now
 sudo usermod -aG nordvpn $USER
@@ -47,5 +47,8 @@ if [ ! -d ~/.tmux/plugins/tpm ]; then
 	mkdir -p ~/.tmux/plugins
 	git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 fi
+
+echo "Importing dconf settings"
+dconf load / < .config/dconf/settings.ini
 
 echo "Installation complete."
