@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mkdir -p {~/projects}
+mkdir -p ~/projects
 git clone https://github.com/davidkariuki/dotfiles.git ~/projects/dotfiles
 
 cd ~/projects/dotfiles
