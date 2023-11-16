@@ -66,7 +66,15 @@ return {
     lspconfig.cssmodules_ls.setup({})
     lspconfig.tsserver.setup({})
     lspconfig.solargraph.setup({})
-    lspconfig.rust_analyzer.setup({})
+    lspconfig.rust_analyzer.setup({
+      settings = {
+        ["rust-analyzer"] = {
+          cargo = {
+            allFeatures = true,
+          },
+        },
+      },
+    })
 
     -- Diagnostics
     local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
