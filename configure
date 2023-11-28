@@ -21,6 +21,7 @@ ln -sf "${THEME_DIR}/gtk-4.0/gtk-dark.css" "${HOME}/.config/gtk-4.0/gtk-dark.css
 echo "Enabling services..."
 sudo systemctl enable bluetooth.service --now
 sudo systemctl enable nordvpnd.service --now
+nordvpn set autoconnect 1
 sudo usermod -aG nordvpn $USER
 
 echo "Starting Desktop Configuration..."
