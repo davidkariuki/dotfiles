@@ -148,7 +148,9 @@ unset __conda_setup
 export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
 
-export PATH=$PATH:/home/me/.spicetify
+export N_PREFIX=$HOME/.n
+export PATH=$N_PREFIX/bin:$PATH:/home/me/.npm-global/bin
+
 
 # bun completions
 [ -s "/home/me/.bun/_bun" ] && source "/home/me/.bun/_bun"
