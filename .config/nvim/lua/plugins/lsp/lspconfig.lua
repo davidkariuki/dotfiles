@@ -65,6 +65,7 @@ return {
     lspconfig.cssls.setup({})
     lspconfig.cssmodules_ls.setup({})
     lspconfig.tsserver.setup({})
+    lspconfig.standardrb.setup({})
     lspconfig.solargraph.setup({})
     lspconfig.rust_analyzer.setup({
       settings = {
