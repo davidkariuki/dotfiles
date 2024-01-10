@@ -67,15 +67,19 @@ return {
     lspconfig.tsserver.setup({})
     lspconfig.standardrb.setup({})
     lspconfig.solargraph.setup({})
-    lspconfig.rust_analyzer.setup({
-      settings = {
-        ["rust-analyzer"] = {
-          cargo = {
-            allFeatures = true,
+    -- rust setup
+    vim.g.rustaceanvim = {
+      server = {
+        on_attach = on_attach,
+        settings = {
+          ["rust-analyzer"] = {
+            cargo = {
+              allFeatures = true,
+            },
           },
         },
       },
-    })
+    }
 
     -- Diagnostics
     local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
