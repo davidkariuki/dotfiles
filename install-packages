@@ -2,10 +2,22 @@
 
 echo "Installing applications..."
 
-yay -S --needed --answerclean Y --answerdiff N --removemake --noconfirm zsh \
-  tmux bat neofetch wezterm lazygit go neovim-nightly-bin btop ripgrep eza \
-  discord github-cli starship lf nordvpn-bin zoxide ulauncher fzf tldr \
-  qt5-graphicaleffects qt5-svg qt5-quickcontrols2 noto-fonts-emoji ttf-font-awesome \
-  gnome-shell-extension-pop-shell-git catppuccin-cursors-mocha npm gnome-themes-extra \
-  vscode-langservers-extracted cssmodules-language-server typescript
+if [[ "$OSTYPE" == "linux"* ]]; then
+  sudo pacman -S --needed --noconfirm base-devel git python
+
+  if [ -z $(which yay) ]; then
+    mkdir -p ~/Downloads
+    cd ~/Downloads && git clone https://aur.archlinux.org/yay.git
+    cd yay && makepkg -si
+  fi
+
+  yay -S --needed --answerclean Y --answerdiff N --removemake --noconfirm zsh \
+    tmux bat neofetch wezterm lazygit go neovim-nightly-bin btop ripgrep eza \
+    discord github-cli starship lf nordvpn-bin zoxide ulauncher fzf tldr \
+    qt5-graphicaleffects qt5-svg qt5-quickcontrols2 noto-fonts-emoji ttf-font-awesome \
+    gnome-shell-extension-pop-shell-git catppuccin-cursors-mocha npm gnome-themes-extra \
+    vscode-langservers-extracted cssmodules-language-server typescript mise
+else
+  brew install zsh tmux neovim ripgrep eza starship mise gh lazygit zoxide discord
+fi
 

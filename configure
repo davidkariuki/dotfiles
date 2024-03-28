@@ -7,22 +7,37 @@ mkdir -p ~/.npm-global
 npm config set prefix ~/.npm-global
 npm i -g bun
 
-echo "Configuring sddm..."
-sudo cp -R .config/sddm/catppuccin-mocha /usr/share/sddm/themes/
-sudo cp .config/sddm/sddm.conf /etc/
+if [[ "$OSTYPE" == "linux"* ]]; then
+  echo "Configuring sddm..."
+  sudo cp -R .config/sddm/catppuccin-mocha /usr/share/sddm/themes/
+  sudo cp .config/sddm/sddm.conf /etc/
 
-echo "Cnfiguring gtk-4 theme"
-THEME_DIR=/usr/share/themes/Catppuccin-Mocha-Standard-Lavender-Dark
-mkdir -p "${HOME}/.config/gtk-4.0"
-ln -sf "${THEME_DIR}/gtk-4.0/assets" "${HOME}/.config/gtk-4.0/assets"
-ln -sf "${THEME_DIR}/gtk-4.0/gtk.css" "${HOME}/.config/gtk-4.0/gtk.css"
-ln -sf "${THEME_DIR}/gtk-4.0/gtk-dark.css" "${HOME}/.config/gtk-4.0/gtk-dark.css"
+  echo "Cnfiguring gtk-4 theme"
+  THEME_DIR=/usr/share/themes/Catppuccin-Mocha-Standard-Lavender-Dark
+  mkdir -p "${HOME}/.config/gtk-4.0"
+  ln -sf "${THEME_DIR}/gtk-4.0/assets" "${HOME}/.config/gtk-4.0/assets"
+  ln -sf "${THEME_DIR}/gtk-4.0/gtk.css" "${HOME}/.config/gtk-4.0/gtk.css"
+  ln -sf "${THEME_DIR}/gtk-4.0/gtk-dark.css" "${HOME}/.config/gtk-4.0/gtk-dark.css"
 
-echo "Enabling services..."
-sudo systemctl enable bluetooth.service --now
-sudo systemctl enable nordvpnd.service --now
-nordvpn set autoconnect 1
-sudo usermod -aG nordvpn $USER
+  echo "Enabling services..."
+  sudo systemctl enable bluetooth.service --now
+  sudo systemctl enable nordvpnd.service --now
+  nordvpn set autoconnect 1
+  sudo usermod -aG nordvpn $USER
+
+  echo "Importing dconf settings"
+  dconf load / < .config/dconf/settings.ini
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5 "['<Super>5']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 "['<Super>6']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7 "['<Super>7']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8 "['<Super>8']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5 "['<Shift><Super>5']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6 "['<Shift><Super>6']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7 "['<Shift><Super>7']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8 "['<Shift><Super>8']"
+fi
+
+
 
 echo "Starting Desktop Configuration..."
 
@@ -56,15 +71,5 @@ if [ ! -d ~/.tmux/plugins/tpm ]; then
 	git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 fi
 
-echo "Importing dconf settings"
-dconf load / < .config/dconf/settings.ini
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5 "['<Super>5']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 "['<Super>6']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7 "['<Super>7']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8 "['<Super>8']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5 "['<Shift><Super>5']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6 "['<Shift><Super>6']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7 "['<Shift><Super>7']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8 "['<Shift><Super>8']"
 
 echo "Installation complete."
