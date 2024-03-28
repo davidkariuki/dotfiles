@@ -16,8 +16,8 @@ return {
 		"Fira Code",
 	}),
 
-	font_size = 9.5,
-	window_decorations = "NONE",
+	font_size = 13.5,
+	window_decorations = "RESIZE",
 	window_background_opacity = 0.95,
 	window_padding = {
 		left = 20,

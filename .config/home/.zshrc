@@ -11,7 +11,7 @@ eval "$(starship init zsh)"
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/me/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 typeset -gA ZSH_HIGHLIGHT_STYLES
 
 # Set name of the theme to load --- if set to "random", it will
@@ -121,7 +121,7 @@ export BAT_THEME="TwoDark"
 alias cat="bat"
 alias vim="nvim"
 alias lg="lazygit"
-alias ls="exa --icons"
+alias ls="eza --icons"
 
 LOCAL_PATH="${HOME}/.local"
 export PATH=$PATH:$LOCAL_PATH/bin
@@ -130,14 +130,14 @@ prompt_context(){}
 
 
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/me/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('${HOME}/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/me/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/me/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "${HOME}/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "${HOME}/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/me/anaconda3/bin:$PATH"
+        export PATH="${HOME}/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -149,11 +149,11 @@ export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
 
 export N_PREFIX=$HOME/.n
-export PATH=$N_PREFIX/bin:$PATH:/home/me/.npm-global/bin
+export PATH=$N_PREFIX/bin:$PATH:${HOME}/.npm-global/bin
 
 
 # bun completions
-[ -s "/home/me/.bun/_bun" ] && source "/home/me/.bun/_bun"
+[ -s "${HOME}/.bun/_bun" ] && source "${HOME}/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
