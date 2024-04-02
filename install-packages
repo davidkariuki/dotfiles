@@ -18,6 +18,10 @@ if [[ "$OSTYPE" == "linux"* ]]; then
     gnome-shell-extension-pop-shell-git catppuccin-cursors-mocha npm gnome-themes-extra \
     vscode-langservers-extracted cssmodules-language-server typescript mise
 else
+  if ! command -v brew &> /dev/null; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+
   brew install zsh tmux neovim ripgrep eza starship mise gh lazygit zoxide discord
 fi
 
