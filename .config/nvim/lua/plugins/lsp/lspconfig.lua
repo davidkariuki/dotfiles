@@ -67,6 +67,7 @@ return {
     lspconfig.tsserver.setup({})
     lspconfig.standardrb.setup({})
     lspconfig.solargraph.setup({})
+    lspconfig.tailwindcss.setup({})
     -- rust setup
     vim.g.rustaceanvim = {
       server = {
