@@ -64,7 +64,7 @@ return {
     lspconfig.eslint.setup({})
     lspconfig.cssls.setup({})
     lspconfig.cssmodules_ls.setup({})
-    lspconfig.tsserver.setup({})
+    lspconfig.ts_ls.setup({})
     lspconfig.standardrb.setup({})
     lspconfig.solargraph.setup({})
     lspconfig.tailwindcss.setup({})
