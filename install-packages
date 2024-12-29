@@ -22,6 +22,6 @@ else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
 
-  brew install zsh tmux neovim ripgrep eza starship mise gh lazygit zoxide discord
+  brew install zsh tmux neovim ripgrep eza starship mise gh lazygit zoxide discord bat ghostty
 fi
 
