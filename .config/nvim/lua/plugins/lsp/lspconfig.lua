@@ -65,9 +65,9 @@ return {
     lspconfig.cssls.setup({})
     lspconfig.cssmodules_ls.setup({})
     lspconfig.ts_ls.setup({})
-    lspconfig.standardrb.setup({})
-    lspconfig.solargraph.setup({})
     lspconfig.tailwindcss.setup({})
+    lspconfig.ruby_lsp.setup({})
+
     -- rust setup
     vim.g.rustaceanvim = {
       server = {
@@ -99,9 +99,6 @@ return {
         prefix = "",
       },
     })
-
-    -- configure python server
-    lspconfig.pyright.setup({})
 
     -- configure lua server (with special settings)
     lspconfig.lua_ls.setup({
