@@ -1,5 +1,2 @@
--- Keybinds and settings
-require("core")
-
--- Lazy bootstrap & plugins
-require("lazy-nvim")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
