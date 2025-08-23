@@ -6,7 +6,6 @@ local map = vim.keymap.set
 
 map("i", "jk", "<Esc>", { noremap = true, silent = true, desc = "Exit editing mode" })
 map("n", "<Leader>w", "<cmd>up<CR>", { noremap = true, desc = "Update file" })
-map("n", "<Leader>w", "<cmd>up<CR>", { noremap = true, desc = "Update file" })
 map(
   "n",
   "<leader><space>",
@@ -14,3 +13,6 @@ map(
   { desc = "Redraw / Clear hlsearch / Diff Update" }
 )
 map("n", "<C-p>", LazyVim.pick("files", { root = false }), { desc = "Find Files (cwd)" })
+map("v", "<Leader>y", '"+y', { noremap = true })
+map("n", "<Leader>y", '"+y', { noremap = true })
+map("n", "<Leader>Y", '"+yg_', { noremap = true })
