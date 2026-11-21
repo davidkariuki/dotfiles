@@ -231,6 +231,18 @@ configure() {
       "$custom/plugins/zsh-vi-mode"
   fi
 
+  info "Installing tmux plugins"
+
+  if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+    mkdir -p "$HOME/.tmux/plugins"
+    git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
+  fi
+
+  if command -v tmux >/dev/null 2>&1; then
+    tmux start-server \; set-environment -g TMUX_PLUGIN_MANAGER_PATH "$HOME/.tmux/plugins" 2>/dev/null || true
+    "$HOME/.tmux/plugins/tpm/bin/install_plugins" || true
+  fi
+
   info "Installing runtimes with mise"
 
   if command -v mise >/dev/null 2>&1; then

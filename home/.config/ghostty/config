@@ -9,7 +9,7 @@ background = #181825
 background-opacity = 0.95
 background-blur-radius = 20
 
-font-family = "MonoLisa Nerd Font"
+font-family = "MonoLisa Nerd Font Mono"
 font-size = 13.5
 font-style = Regular
 cursor-style = block

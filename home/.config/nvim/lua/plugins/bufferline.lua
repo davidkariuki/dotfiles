@@ -1,9 +1,7 @@
+-- Buffer tabs are provided by tmux; do not show Neovim's bufferline.
 return {
-  "akinsho/bufferline.nvim",
-  optional = true,
-  opts = function(_, opts)
-    if (vim.g.colors_name or ""):find("catppuccin") then
-      opts.highlights = require("catppuccin.special.bufferline").get_theme()
-    end
-  end,
+  {
+    "akinsho/bufferline.nvim",
+    enabled = false,
+  },
 }
