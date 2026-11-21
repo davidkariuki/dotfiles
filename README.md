@@ -1,13 +1,22 @@
 # .files
 
-My personal configuration files
+Personal configuration for **Omarchy (Arch Linux)** and **macOS**.
 
-#### Screenshot
+## Installation
 
-![Desktop](https://github.com/davidkariuki/dotfiles/raw/main/screenshots/desktop.png "desktop")
-
-### Installation
-
-```zsh
-sh -c "`curl -fsSL https://raw.githubusercontent.com/davidkariuki/dotfiles/main/install.sh`"
+```sh
+git clone https://github.com/davidkariuki/dotfiles.git ~/projects/dotfiles
+cd ~/projects/dotfiles
+./install.sh
 ```
+
+Or run individual steps:
+
+```sh
+./install.sh packages
+./install.sh link
+./install.sh configure
+```
+
+`./install.sh unlink` removes the symlinks again. Existing real files are backed up to `*.bak` before linking.
+

@@ -1,0 +1,10 @@
+# lf settings
+set hidden true
+set icons true
+set scrolloff 10
+set cursorpreviewfmt "\033[7;2m"
+
+# Built-in defaults already cover open/copy/cut/paste/rename/reload.
+# Enter opens the selection; "." toggles hidden files.
+map <enter> open
+map . set hidden!

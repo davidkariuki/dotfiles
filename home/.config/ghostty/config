@@ -1,0 +1,40 @@
+# Ghostty (macOS)
+# Kept in sync with the Omarchy foot setup where possible.
+
+# Optional Omarchy theme (ignored on a fresh macOS install).
+config-file = ?"~/.local/state/omarchy/current/theme/ghostty.conf"
+
+theme = Catppuccin Mocha
+background = #181825
+background-opacity = 0.95
+background-blur-radius = 20
+
+font-family = "MonoLisa Nerd Font"
+font-size = 13.5
+font-style = Regular
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor,ssh-env
+
+# macOS window behavior
+macos-titlebar-style = hidden
+macos-auto-secure-input = true
+macos-secure-input-indication = true
+window-save-state = always
+window-decoration = true
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+confirm-close-surface = false
+auto-update = check
+
+# Keys and scrolling (mirrors the foot/tmux setup)
+keybind = shift+insert=paste_from_clipboard
+keybind = control+insert=copy_to_clipboard
+keybind = shift+enter=csi:13;2u
+keybind = alt+shift+enter=csi:13;4u
+keybind = super+control+shift+alt+arrow_down=resize_split:down,100
+keybind = super+control+shift+alt+arrow_up=resize_split:up,100
+keybind = super+control+shift+alt+arrow_left=resize_split:left,100
+keybind = super+control+shift+alt+arrow_right=resize_split:right,100
+mouse-scroll-multiplier = 0.95
