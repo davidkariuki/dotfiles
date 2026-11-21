@@ -47,6 +47,12 @@ alias ls="eza --icons"
 # Paths
 export PATH="$HOME/.local/bin:$PATH"
 
+# Homebrew Ruby (macOS, keg-only)
+for ruby_bin in /opt/homebrew/opt/ruby/bin /usr/local/opt/ruby/bin; do
+  [ -d "$ruby_bin" ] && PATH="$ruby_bin:$PATH"
+done
+export PATH
+
 # zoxide
 eval "$(zoxide init zsh)"
 

@@ -189,9 +189,9 @@ install_packages() {
     info "Installing the few packages Omarchy doesn't ship"
 
     if command -v omarchy >/dev/null 2>&1; then
-      omarchy pkg add zsh lf github-cli firefox
+      omarchy pkg add zsh lf github-cli firefox ruby-bundler
     else
-      sudo pacman -S --needed --noconfirm zsh lf github-cli firefox
+      sudo pacman -S --needed --noconfirm zsh lf github-cli firefox ruby-bundler
     fi
   else
     warn "Unsupported platform: $OSTYPE"

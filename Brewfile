@@ -14,6 +14,9 @@ brew "zoxide"
 brew "fzf"
 brew "lf"
 brew "lazygit"
+
+# Ruby / Rails
+brew "ruby"
 brew "mise"
 brew "gh"
 
